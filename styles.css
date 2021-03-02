@@ -1,0 +1,89 @@
+.instruction-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.instruction-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.instruction-content-button {
+  position: absolute;
+  right: 10%;
+}
+
+.member-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  right: 5%;
+  top: 0;
+  width: 20%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  text-align: center;
+}
+.member-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.member-content-button {
+  position: absolute;
+  right: 10%;
+}
+
+.info-popup {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  text-align: center;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.info-content {
+  display: flex;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.info-content-button {
+  position: absolute;
+  right: 10%;
+}
+.info-content-item1 {
+  width: 50%;
+  height: 200px;
+  background-color: blue;
+}
+.info-content-item2 {
+  width: 50%;
+  height: 200px;
+  background-color: green;
+}
+.info-content-item1-image {
+  width: 50%;
+  height: 75%;
+}
