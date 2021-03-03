@@ -5,46 +5,46 @@ var oldFrom = -1,
 nodeDataArray = [
   { key: -1, loc: "-75 28" },
 
-  { key: 0, loc: "0 0", text: "0เริ่มต้น", category: "rStart" },
+  { key: 0, loc: "0 0", text: "เริ่มต้น", category: "rStart" },
 
-  { key: 1, loc: "200 -100", text: "1ข้าว", category: "Start" },
-  { key: 2, loc: "200 100", text: "2อาหารเม็ด", category: "Start" },
+  { key: 1, loc: "200 -100", text: "ข้าว", category: "Start" },
+  { key: 2, loc: "200 100", text: "อาหารเม็ด", category: "Start" },
 
-  { key: 3, loc: "400 -250", text: "3ข้าวหน้า\nปลาดิบ", category: "Start" },
-  { key: 4, loc: "400 -84", text: "4ข้าวหน้า\nปลาย่าง", category: "Start" },
+  { key: 3, loc: "400 -250", text: "ข้าวหน้า\nปลาดิบ", category: "Start" },
+  { key: 4, loc: "400 -84", text: "ข้าวหน้า\nปลาย่าง", category: "Start" },
 
-  { key: 5, loc: "400 84", text: "5\nอาหารเม็ดใส่ปลาดิบ", category: "Start" },
-  { key: 6, loc: "400 250", text: "6\nอาหารเม็ดใส่ปลาย่าง", category: "Start" },
+  { key: 5, loc: "400 84", text: "อาหารเม็ดใส่ปลาดิบ", category: "Start" },
+  { key: 6, loc: "400 250", text: "อาหารเม็ดใส่ปลาย่าง", category: "Start" },
 
   {
     key: 7,
     loc: "600 -200",
-    text: "7\nข้าวหน้า\nปลาดิบ\n+ขนมแมว",
+    text: "ข้าวหน้า\nปลาดิบ\n+ขนมแมว",
     category: "Start",
   },
   {
     key: 8,
     loc: "600 -100",
-    text: "8\nข้าวหน้า\nปลาย่าง\n+ขนมแมว",
+    text: "ข้าวหน้า\nปลาย่าง\n+ขนมแมว",
     category: "Start",
   },
 
   {
     key: 9,
     loc: "600 100",
-    text: "9\nอาหารเม็ดใส่ปลาดิบ\n+ขนมแมว",
+    text: "อาหารเม็ดใส่ปลาดิบ\n+ขนมแมว",
     category: "Start",
   },
   {
     key: 10,
     loc: "600 200",
-    text: "10\nอาหารเม็ดใส่ปลาย่าง\n+ขนมแมว",
+    text: "อาหารเม็ดใส่ปลาย่าง\n+ขนมแมว",
     category: "Start",
   },
 
-  { key: 11, loc: "800 -125", text: "11\nน้อน\nอ้วก", category: "End" },
-  { key: 12, loc: "800 0", text: "12\nน้อนถูกใจ", category: "End" },
-  { key: 13, loc: "800 125", text: "13\nน้อน\nไม่กิน", category: "End" },
+  { key: 11, loc: "800 -125", text: "น้อน\nอ้วก", category: "End" },
+  { key: 12, loc: "800 0", text: "น้อน\nถูกใจ", category: "End" },
+  { key: 13, loc: "800 125", text: "น้อน\nไม่กิน", category: "End" },
 
   { key: 14, loc: "1000 0", text: "Trap\nstate", category: "Start" },
 ];
@@ -103,6 +103,14 @@ linkDataArray = [
     segmentIndex: 2,
     segmentFraction: 0.4,
   },
+  {
+    from: 1,
+    to: 13,
+    text: "Confirm",
+    points: [250, -20, 250, 50, 785, 50, 785, 150, 803, 150],
+    segmentIndex: 0,
+    segmentFraction: 0.2,
+  },
 
   //อาหารเม็ด
   {
@@ -143,6 +151,14 @@ linkDataArray = [
     text: "ปลาย่าง",
     segmentIndex: 1,
     segmentFraction: 0.35,
+  },
+  {
+    from: 2,
+    to: 12,
+    text: "Confirm",
+    points: [240, 100, 240, 40, 800, 40],
+    segmentIndex: 0,
+    segmentFraction: 0.2,
   },
 
   // ข้าวหน้าปลาดิบ
@@ -513,101 +529,164 @@ linkDataArray = [
     segmentFraction: 0.25,
   },
 
-  // น้อนถูกใจสิ่งนี้
-
   // น้อนอ้วก
-  // { "from": 12, "to": 7, "text": "ปลาร้า", "points": [615, 210, 477, 200], "segmentIndex": 0, "segmentFraction": 0.2 },
-  // { "from": 13, "to": 14, "segmentFraction": 0.5, "segmentIndex": 2, "text": "เผ็ดน้อย,เผ็ดมาก,\nปูเค็ม,หมูยอ,\nไข่เค็ม,ปลาร้า,\nReset,confirm" },
+  {
+    from: 11,
+    to: 14,
+    text: "ข้าว,อาหารเม็ด,\nปลาดิบ,ปลาย่าง,\nขนมแมว,Confirm",
+    points: [880, -90, 1040, -90, 1040, 0],
+    segmentIndex: 1,
+    segmentFraction: 0.25,
+  },
+
+  // น้อนถูกใจสิ่งนี้
+  {
+    from: 12,
+    to: 14,
+    text: "ข้าว,อาหารเม็ด,\nปลาดิบ,ปลาย่าง,\nขนมแมว,Confirm",
+    points: [880, 40, 1000, 40],
+    segmentIndex: 0,
+    segmentFraction: 0.45,
+  },
 
   // Trap_state
-  // { "from": 14, "to": 14, "points": [1060, 80, 1060, 120, 1005, 120, 1005, 70,], "segmentIndex": 1, "segmentFraction": 0.5, "text": "เผ็ดน้อย,เผ็ดมาก,\nปูเค็ม,หมูยอ,\nไข่เค็ม,ปลาร้า,\nReset,Confirm" },
+  {
+    from: 14,
+    to: 14,
+    points: [1075, 20, 1190, 20, 1190, 60, 1075, 60],
+    segmentIndex: 1,
+    segmentFraction: 0.5,
+    text: "ข้าว,อาหารเม็ด\n,ปลาดิบ,ปลาย่าง,\nขนมแมว,Confirm",
+  },
 
   // น้อนไม่กิน
-  // { "from": 1, "to": 13, "text": "Confirm", "points": [240, -20, 350, 40, 800, 40], "segmentFraction": 0.4 },
-  // { "from": 2, "to": 13, "text": "Confirm", "points": [240, 100, 350, 40, 800, 40], "segmentFraction": 0.4 },
-  // { "from": 3, "to": 13, "text": "Confirm", "points": [465, -180, 560, -170, 560, 40, 800, 40], "segmentFraction": 0.3 },
-  // { "from": 4, "to": 13, "text": "Confirm", "points": [465, -80, 560, -70, 560, 40, 800, 40], "segmentFraction": 0.3 },
-  // { "from": 5, "to": 13, "text": "Confirm", "points": [460, 20, 500, 40, 800, 40], "segmentFraction": 0.5 },
-  // { "from": 6, "to": 13, "text": "Confirm", "points": [460, 55, 500, 40, 800, 40], "segmentFraction": 0.5 },
-  // { "from": 7, "to": 13, "text": "Confirm", "points": [460, 155, 560, 150, 560, 40, 800, 40], "segmentFraction": 0.3 },
-  // { "from": 8, "to": 13, "text": "Confirm", "points": [465, 260, 560, 250, 560, 40, 800, 40], "segmentFraction": 0.3 },
-  // { "from": 9, "to": 13, "text": "Confirm", "points": [675, -140, 840, -120, 840, 0], "segmentFraction": 0.75 },
-  // { "from": 10, "to": 13, "text": "Confirm", "points": [680, -60, 840, -20, 840, 0], "segmentFraction": 0.75 },
-  // { "from": 11, "to": 13, "text": "Confirm", "points": [675, 120, 840, 100, 840, 80], "segmentFraction": 0.75 },
-  // { "from": 12, "to": 13, "text": "Confirm", "points": [675, 220, 840, 200, 840, 80], "segmentFraction": 0.75 },
-
-  //Start and Reset
+  {
+    from: 13,
+    to: 14,
+    text: "ข้าว,อาหารเม็ด,\nปลาดิบ,ปลาย่าง,\nขนมแมว,Confirm",
+    points: [880, 160, 1040, 160, 1040, 80],
+    segmentIndex: 1,
+    segmentFraction: 0.25,
+  },
+  // Restart
   { from: -1, to: 0, text: "" },
   {
     from: 1,
     to: 0,
-    text: "Reset",
+    text: "Restart",
     points: [240, -100, 240, -270, 40, -270, 40, 0],
   },
   {
     from: 2,
     to: 0,
-    text: "Reset",
+    text: "Restart",
     points: [240, 180, 240, 350, 40, 350, 40, 80],
   },
   {
     from: 3,
     to: 0,
-    text: "Reset",
+    text: "Restart",
     points: [440, -250, 440, -270, 40, -270, 40, 0],
     segmentFraction: 0.5,
   },
-  // { "from": 4, "to": 0, "text": "Reset", "points": [475, -130, 530, -160, 530, -270, 40, -270, 40, 0,], "segmentFraction": 0.25 },
   {
     from: 4,
     to: 0,
-    text: "Reset",
+    text: "Restart",
     points: [475, -30, 530, -60, 530, -270, 40, -270, 40, 0],
     segmentFraction: 0.55,
   },
   {
     from: 5,
     to: 0,
-    text: "Reset",
+    text: "Restart",
     points: [475, 110, 530, 140, 530, 350, 40, 350, 40, 80],
     segmentFraction: 0.55,
   },
-  // { "from": 7, "to": 0, "text": "Reset", "points": [475, 210, 530, 240, 530, 350, 40, 350, 40, 80,], "segmentFraction": 0.45 },
   {
     from: 7,
     to: 0,
-    text: "Reset",
+    text: "Restart",
     points: [440, 330, 440, 350, 40, 350, 40, 80],
     segmentFraction: 0.5,
   },
   {
     from: 7,
     to: 0,
-    text: "Reset",
+    text: "Restart",
     points: [640, -200, 640, -270, 40, -270, 40, 0],
     segmentFraction: 0.7,
   },
   {
     from: 8,
     to: 0,
-    text: "Reset",
+    text: "Restart",
     points: [680, -60, 710, -100, 710, -270, 40, -270, 40, 0],
     segmentFraction: 0.7,
   },
   {
     from: 9,
     to: 0,
-    text: "Reset",
+    text: "Restart",
     points: [680, 140, 710, 180, 710, 350, 40, 350, 40, 80],
     segmentFraction: 0.7,
   },
   {
     from: 10,
     to: 0,
-    text: "Reset",
+    text: "Restart",
     points: [640, 280, 640, 350, 40, 350, 40, 80],
     segmentIndex: 0,
     segmentFraction: 0.7,
+  },
+  {
+    from: 11,
+    to: 0,
+    points: [876, -100, 1125, -100, 1125, -270, 40, -270, 40, 0],
+    segmentIndex: 0,
+    segmentFraction: 0.25,
+    text: "Restart",
+  },
+  {
+    from: 12,
+    to: 0,
+    points: [
+      870,
+      20,
+      870,
+      -30,
+      876,
+      -30,
+      1125,
+      -30,
+      1125,
+      -100,
+      1125,
+      -270,
+      40,
+      -270,
+      40,
+      0,
+    ],
+    segmentIndex: 1,
+    segmentFraction: 0.25,
+    text: "Restart",
+  },
+  {
+    from: 13,
+    to: 0,
+    text: "Restart",
+    points: [840, 205, 840, 350, 40, 350, 40, 80],
+    segmentIndex: 0,
+    segmentFraction: 0.5,
+  },
+  {
+    from: 14,
+    to: 0,
+    points: [1080, 40, 1125, 40, 1125, 350, 40, 350, 40, 80],
+    segmentIndex: 1,
+    segmentFraction: 0.5,
+    text: "Restart",
   },
 ];
 
