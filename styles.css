@@ -94,6 +94,7 @@
 	margin-left: 20px;
 	font-size: 16px;
 	box-shadow: 0 10px rgb(150, 5, 5);
+    cursor: pointer;
 }
 
 .ButtonRe:hover {
@@ -115,6 +116,7 @@
 	margin-left: 25px;
 	font-size: 16px;
 	box-shadow: 0 10px #008066;
+    cursor: pointer;
 }
 
 .ButtonCon:hover {
@@ -148,6 +150,7 @@
 	color: white;
 	font-size: 10px;
 	transform: translateX(-20px);
+    cursor: pointer;
 }
 
 .Button-i:hover {
@@ -160,14 +163,32 @@
 }
 
 .snack {
-	display: flex;
+    display: flex;
 	justify-content: space-around;
 }
 
-.snack button {
-	transform: translateX(-100px);
+.snack .Button-i{
+    transform: translateX(-100px);
 }
 
 .minifood {
 	position: relative;
 }
+
+/*-------------รูปอาหาร--------------*/
+.Button-pic{
+    background-color: transparent;
+    border: transparent;
+    cursor: pointer;
+}
+
+.Button-pic:hover{
+    border: #f24726;
+    box-shadow: 0 0 10px #f24726;
+}
+
+.Button-pic:active{
+    /*box-shadow: 0 0 10px #f24726*/
+
+}
+/*----------------------------------*/
