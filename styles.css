@@ -131,6 +131,8 @@
 	height: 5px;
 	background-color: #fac710;
 	border: none;
+	border-radius: 10px;
+	box-shadow: 1px 2px 3px #f1d56d;
 }
 
 .t {
@@ -145,8 +147,27 @@
 	height: 20px;
 	color: white;
 	font-size: 10px;
+	transform: translateX(-20px);
 }
 
 .Button-i:hover {
 	box-shadow: 0 0 5px #2d9bf0;
+}
+
+.food {
+	display: flex;
+	justify-content: space-around;
+}
+
+.snack {
+	display: flex;
+	justify-content: space-around;
+}
+
+.snack button {
+	transform: translateX(-100px);
+}
+
+.minifood {
+	position: relative;
 }
