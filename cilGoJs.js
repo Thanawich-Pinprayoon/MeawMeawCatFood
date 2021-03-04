@@ -57,7 +57,7 @@ linkDataArray = [
     points: [5, 60, -30, 60, -30, 100, 10, 100, 10, 65],
     segmentIndex: 2,
     segmentFraction: 0.5,
-    text: "ปลาดิบ,ปลาย่าง,\nขนมแมว,Restart,Confirm",
+    text: "ปลาดิบ,ปลาย่าง,\nขนมแมว,Restart,\nConfirm",
   },
   { from: 0, to: 1, text: "ข้าว", segmentIndex: 2, segmentFraction: 0.4 },
   { from: 0, to: 2, text: "อาหารเม็ด", segmentIndex: 2, segmentFraction: 0.4 },
@@ -556,7 +556,7 @@ linkDataArray = [
     points: [1075, 20, 1190, 20, 1190, 60, 1075, 60],
     segmentIndex: 1,
     segmentFraction: 0.5,
-    text: "ข้าว,อาหารเม็ด\n,ปลาดิบ,ปลาย่าง,\nขนมแมว,Confirm",
+    text: "ข้าว,อาหารเม็ด\n,ปลาดิบ,ปลาย่าง,\nขนมแมว,Confirm\nRestart",
   },
 
   // น้อนไม่กิน
@@ -570,124 +570,124 @@ linkDataArray = [
   },
   // Restart
   { from: -1, to: 0, text: "" },
-  {
-    from: 1,
-    to: 0,
-    text: "Restart",
-    points: [240, -100, 240, -270, 40, -270, 40, 0],
-  },
-  {
-    from: 2,
-    to: 0,
-    text: "Restart",
-    points: [240, 180, 240, 350, 40, 350, 40, 80],
-  },
-  {
-    from: 3,
-    to: 0,
-    text: "Restart",
-    points: [440, -250, 440, -270, 40, -270, 40, 0],
-    segmentFraction: 0.5,
-  },
-  {
-    from: 4,
-    to: 0,
-    text: "Restart",
-    points: [475, -30, 530, -60, 530, -270, 40, -270, 40, 0],
-    segmentFraction: 0.55,
-  },
-  {
-    from: 5,
-    to: 0,
-    text: "Restart",
-    points: [475, 110, 530, 140, 530, 350, 40, 350, 40, 80],
-    segmentFraction: 0.55,
-  },
-  {
-    from: 7,
-    to: 0,
-    text: "Restart",
-    points: [440, 330, 440, 350, 40, 350, 40, 80],
-    segmentFraction: 0.5,
-  },
-  {
-    from: 7,
-    to: 0,
-    text: "Restart",
-    points: [640, -200, 640, -270, 40, -270, 40, 0],
-    segmentFraction: 0.7,
-  },
-  {
-    from: 8,
-    to: 0,
-    text: "Restart",
-    points: [680, -60, 710, -100, 710, -270, 40, -270, 40, 0],
-    segmentFraction: 0.7,
-  },
-  {
-    from: 9,
-    to: 0,
-    text: "Restart",
-    points: [680, 140, 710, 180, 710, 350, 40, 350, 40, 80],
-    segmentFraction: 0.7,
-  },
-  {
-    from: 10,
-    to: 0,
-    text: "Restart",
-    points: [640, 280, 640, 350, 40, 350, 40, 80],
-    segmentIndex: 0,
-    segmentFraction: 0.7,
-  },
-  {
-    from: 11,
-    to: 0,
-    points: [876, -100, 1125, -100, 1125, -270, 40, -270, 40, 0],
-    segmentIndex: 0,
-    segmentFraction: 0.25,
-    text: "Restart",
-  },
-  {
-    from: 12,
-    to: 0,
-    points: [
-      870,
-      20,
-      870,
-      -30,
-      876,
-      -30,
-      1125,
-      -30,
-      1125,
-      -100,
-      1125,
-      -270,
-      40,
-      -270,
-      40,
-      0,
-    ],
-    segmentIndex: 1,
-    segmentFraction: 0.25,
-    text: "Restart",
-  },
-  {
-    from: 13,
-    to: 0,
-    text: "Restart",
-    points: [840, 205, 840, 350, 40, 350, 40, 80],
-    segmentIndex: 0,
-    segmentFraction: 0.5,
-  },
-  {
-    from: 14,
-    to: 0,
-    points: [1080, 40, 1125, 40, 1125, 350, 40, 350, 40, 80],
-    segmentIndex: 1,
-    segmentFraction: 0.5,
-    text: "Restart",
-  },
+  // {
+  //   from: 1,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [240, -100, 240, -270, 40, -270, 40, 0],
+  // },
+  // {
+  //   from: 2,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [240, 180, 240, 350, 40, 350, 40, 80],
+  // },
+  // {
+  //   from: 3,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [440, -250, 440, -270, 40, -270, 40, 0],
+  //   segmentFraction: 0.5,
+  // },
+  // {
+  //   from: 4,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [475, -30, 530, -60, 530, -270, 40, -270, 40, 0],
+  //   segmentFraction: 0.55,
+  // },
+  // {
+  //   from: 5,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [475, 110, 530, 140, 530, 350, 40, 350, 40, 80],
+  //   segmentFraction: 0.55,
+  // },
+  // {
+  //   from: 7,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [440, 330, 440, 350, 40, 350, 40, 80],
+  //   segmentFraction: 0.5,
+  // },
+  // {
+  //   from: 7,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [640, -200, 640, -270, 40, -270, 40, 0],
+  //   segmentFraction: 0.7,
+  // },
+  // {
+  //   from: 8,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [680, -60, 710, -100, 710, -270, 40, -270, 40, 0],
+  //   segmentFraction: 0.7,
+  // },
+  // {
+  //   from: 9,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [680, 140, 710, 180, 710, 350, 40, 350, 40, 80],
+  //   segmentFraction: 0.7,
+  // },
+  // {
+  //   from: 10,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [640, 280, 640, 350, 40, 350, 40, 80],
+  //   segmentIndex: 0,
+  //   segmentFraction: 0.7,
+  // },
+  // {
+  //   from: 11,
+  //   to: 0,
+  //   points: [876, -100, 1125, -100, 1125, -270, 40, -270, 40, 0],
+  //   segmentIndex: 0,
+  //   segmentFraction: 0.25,
+  //   text: "Restart",
+  // },
+  // {
+  //   from: 12,
+  //   to: 0,
+  //   points: [
+  //     870,
+  //     20,
+  //     870,
+  //     -30,
+  //     876,
+  //     -30,
+  //     1125,
+  //     -30,
+  //     1125,
+  //     -100,
+  //     1125,
+  //     -270,
+  //     40,
+  //     -270,
+  //     40,
+  //     0,
+  //   ],
+  //   segmentIndex: 1,
+  //   segmentFraction: 0.25,
+  //   text: "Restart",
+  // },
+  // {
+  //   from: 13,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [840, 205, 840, 350, 40, 350, 40, 80],
+  //   segmentIndex: 0,
+  //   segmentFraction: 0.5,
+  // },
+  // {
+  //   from: 14,
+  //   to: 0,
+  //   points: [1080, 40, 1125, 40, 1125, 350, 40, 350, 40, 80],
+  //   segmentIndex: 1,
+  //   segmentFraction: 0.5,
+  //   text: "Restart",
+  // },
 ];
 
 var $ = go.GraphObject.make; // for conciseness in defining templates
@@ -1023,7 +1023,7 @@ function init() {
       locationSpot: go.Spot.Center,
     },
     $(go.Shape, "Ellipse", {
-      fill: $(go.Brush, "Radial", { 0.5: "#ff004d", 1.0: "rgba(0, 0, 0, 0)" }),    // shadow highlight
+      fill: $(go.Brush, "Radial", { 0.5: "#ff004d", 1.0: "rgba(0, 0, 0, 0)" }), // shadow highlight
       stroke: null,
       desiredSize: new go.Size(150, 150),
     })
@@ -1246,8 +1246,6 @@ let Botton = {
   },
 };
 
-
-
 let imgmap = {
   Start_state: "xxx",
   ข้าว: "1rice",
@@ -1262,7 +1260,7 @@ let imgmap = {
   อาหารเม็ดใส่ปลาย่าง_ขนมแมว: "10grillFishMed-S",
   น้อนอ้วก: "11:Yucky",
   น้อนถูกใจสิ่งนี้: "12Like",
-  น้อนไม่กิน: "13Nope"
+  น้อนไม่กิน: "13Nope",
 };
 
 let mixer = ["ปูเค็ม", "หมูยอ", "ไข่เค็ม"];
@@ -1279,4 +1277,12 @@ let lfc1 = [
 let lfc2 = ["Start_state", "ข้าว", "อาหารเม็ด"]; // same
 let lfc3 = [];
 
-let bottonList = ["ข้าว", "อาหารเม็ด", "ปลาดิบ", "ปลาย่าง", "ขนมแมว", "Confirm", "Reset"];
+let bottonList = [
+  "ข้าว",
+  "อาหารเม็ด",
+  "ปลาดิบ",
+  "ปลาย่าง",
+  "ขนมแมว",
+  "Confirm",
+  "Reset",
+];
