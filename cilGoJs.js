@@ -13,8 +13,8 @@ nodeDataArray = [
   { key: 3, loc: "400 -250", text: "ข้าวหน้า\nปลาดิบ", category: "Start" },
   { key: 4, loc: "400 -84", text: "ข้าวหน้า\nปลาย่าง", category: "Start" },
 
-  { key: 5, loc: "400 84", text: "อาหารเม็ดใส่ปลาดิบ", category: "Start" },
-  { key: 6, loc: "400 250", text: "อาหารเม็ดใส่ปลาย่าง", category: "Start" },
+  { key: 5, loc: "400 84", text: "อาหารเม็ด\nใส่ปลาดิบ", category: "Start" },
+  { key: 6, loc: "400 250", text: "อาหารเม็ด\nใส่ปลาย่าง", category: "Start" },
 
   {
     key: 7,
@@ -32,13 +32,13 @@ nodeDataArray = [
   {
     key: 9,
     loc: "600 100",
-    text: "อาหารเม็ดใส่ปลาดิบ\n+ขนมแมว",
+    text: "อาหารเม็ด\nใส่ปลาดิบ\n+ขนมแมว",
     category: "Start",
   },
   {
     key: 10,
     loc: "600 200",
-    text: "อาหารเม็ดใส่ปลาย่าง\n+ขนมแมว",
+    text: "อาหารเม็ด\nใส่ปลาย่าง\n+ขนมแมว",
     category: "Start",
   },
 
@@ -856,7 +856,7 @@ function init() {
         go.Point.stringify
       ),
       $(go.Shape, "Circle", {
-        fill: "#d1d4c9" /* green */,
+        fill: "#e9caf0 " /* green */,
         stroke: null,
         portId: "",
         fromLinkable: true,
@@ -871,7 +871,7 @@ function init() {
         go.TextBlock,
         "Start",
         {
-          font: "bold 13pt Bai Jamjuree, sans-serif",
+          font: "bold 10pt Bai Jamjuree, sans-serif",
           textAlign: "center",
           stroke: "black",
         },
@@ -889,7 +889,7 @@ function init() {
         go.Point.stringify
       ),
       $(go.Shape, "Circle", {
-        fill: "#ff6768" /* green */,
+        fill: "#f67676" /* green */,
         stroke: null,
         portId: "",
         fromLinkable: true,
@@ -1001,7 +1001,7 @@ function init() {
         margin: 4,
         segmentIndex: 0,
         segmentFraction: 0.2,
-        background: "#121212",
+        // background: "#ffffff",
       },
       new go.Binding("text").makeTwoWay(),
       new go.Binding("segmentIndex").makeTwoWay(),
@@ -1016,14 +1016,14 @@ function init() {
   highlighter = $(
     go.Part,
     "Auto",
-    {
+    {    
       layerName: "Background",
       selectable: false,
       isInDocumentBounds: false,
       locationSpot: go.Spot.Center,
     },
     $(go.Shape, "Ellipse", {
-      fill: $(go.Brush, "Radial", { 0.5: "#ff004d", 1.0: "rgba(0, 0, 0, 0)" }), // shadow highlight
+      fill: $(go.Brush, "Radial", { 0.5: "#dd9ded", 1.0: "rgba(250,250, 250, 0)" }), // shadow highlight
       stroke: null,
       desiredSize: new go.Size(150, 150),
     })
@@ -1036,8 +1036,8 @@ function init() {
 
   highlightNode(machine.current_State.key);
   resetPathColor();
-  highlightPath(-1, 0, "#f30a49", "#F08080", "#17b794", "#40E0D0");
-}
+  highlightPath(-1, 0, "#f30a49", "#F08080", "#74acf2", "#1e77b7");
+} 
 
 ////////////////////////////////////////////////////////////////////////////
 ///////////////////// frame edit ////////////////////////////////
@@ -1054,7 +1054,7 @@ function restart() {
     document.getElementById(bottonList[i]).checked = false;
   }
   resetPathColor();
-  highlightPath(-1, 0, "#f30a49", "#F08080", "#17b794", "#40E0D0");
+  highlightPath(-1, 0, "#f24726", "#F08080", "#17b794", "#40E0D0");
   Botton.state = {
     ข้าว: false,
     อาหารเม็ด: false,
@@ -1107,10 +1107,11 @@ function handleClick(bottonName) {
   highlightPath(
     machine.current_State.key,
     next.key,
-    "#f30a49",
-    "#F08080",
-    "#17b794",
-    "#40E0D0"
+    // "#f30a49",
+    // "#F08080",
+    // "#17b794",
+    // "#40E0D0"
+    "#f30a49", "#F08080", "#74acf2", "#666666"
   );
 
   // highlight next state
@@ -1126,7 +1127,7 @@ function handleClick(bottonName) {
       Botton.state[mixer[i]] = false;
     }
   }
-
+    
   if (next.name == "Start_state") {
     document.getElementById("pednoi").checked = false;
     Botton.state["เผ็ดน้อย"] = false;
@@ -1205,7 +1206,7 @@ function resetPathColor() {
   for (let i = 0; i < 16; i++) {
     for (let j = 0; j < 16; j++) {
       // highlightPath(i,j,'#666666','#666666')
-      highlightPath(i, j, "#9C9C9C", "#9C9C9C", "#9C9C9C", "#9C9C9C");
+      highlightPath(i, j, "#7e7e7e", "#7e7e7e", "#7e7e7e", "##7e7e7e");
       highlightPath(-1, -1, "#f30a49", "#f30a49", "#f30a49", "#f30a49");
     }
   }
