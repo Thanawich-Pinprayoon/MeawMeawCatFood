@@ -13,8 +13,8 @@ nodeDataArray = [
   { key: 3, loc: "400 -250", text: "ข้าวหน้า\nปลาดิบ", category: "Start" },
   { key: 4, loc: "400 -84", text: "ข้าวหน้า\nปลาย่าง", category: "Start" },
 
-  { key: 5, loc: "400 84", text: "อาหารเม็ดใส่ปลาดิบ", category: "Start" },
-  { key: 6, loc: "400 250", text: "อาหารเม็ดใส่ปลาย่าง", category: "Start" },
+  { key: 5, loc: "400 84", text: "อาหารเม็ด\nใส่ปลาดิบ", category: "Start" },
+  { key: 6, loc: "400 250", text: "อาหารเม็ด\nใส่ปลาย่าง", category: "Start" },
 
   {
     key: 7,
@@ -32,13 +32,13 @@ nodeDataArray = [
   {
     key: 9,
     loc: "600 100",
-    text: "อาหารเม็ดใส่ปลาดิบ\n+ขนมแมว",
+    text: "อาหารเม็ด\nใส่ปลาดิบ\n+ขนมแมว",
     category: "Start",
   },
   {
     key: 10,
     loc: "600 200",
-    text: "อาหารเม็ดใส่ปลาย่าง\n+ขนมแมว",
+    text: "อาหารเม็ด\nใส่ปลาย่าง\n+ขนมแมว",
     category: "Start",
   },
 
@@ -57,7 +57,7 @@ linkDataArray = [
     points: [5, 60, -30, 60, -30, 100, 10, 100, 10, 65],
     segmentIndex: 2,
     segmentFraction: 0.5,
-    text: "ปลาดิบ,ปลาย่าง,\nขนมแมว,Restart,Confirm",
+    text: "ปลาดิบ,ปลาย่าง,\nขนมแมว,Restart,\nConfirm",
   },
   { from: 0, to: 1, text: "ข้าว", segmentIndex: 2, segmentFraction: 0.4 },
   { from: 0, to: 2, text: "อาหารเม็ด", segmentIndex: 2, segmentFraction: 0.4 },
@@ -556,7 +556,7 @@ linkDataArray = [
     points: [1075, 20, 1190, 20, 1190, 60, 1075, 60],
     segmentIndex: 1,
     segmentFraction: 0.5,
-    text: "ข้าว,อาหารเม็ด\n,ปลาดิบ,ปลาย่าง,\nขนมแมว,Confirm",
+    text: "ข้าว,อาหารเม็ด\n,ปลาดิบ,ปลาย่าง,\nขนมแมว,Confirm\nRestart",
   },
 
   // น้อนไม่กิน
@@ -570,124 +570,124 @@ linkDataArray = [
   },
   // Restart
   { from: -1, to: 0, text: "" },
-  {
-    from: 1,
-    to: 0,
-    text: "Restart",
-    points: [240, -100, 240, -270, 40, -270, 40, 0],
-  },
-  {
-    from: 2,
-    to: 0,
-    text: "Restart",
-    points: [240, 180, 240, 350, 40, 350, 40, 80],
-  },
-  {
-    from: 3,
-    to: 0,
-    text: "Restart",
-    points: [440, -250, 440, -270, 40, -270, 40, 0],
-    segmentFraction: 0.5,
-  },
-  {
-    from: 4,
-    to: 0,
-    text: "Restart",
-    points: [475, -30, 530, -60, 530, -270, 40, -270, 40, 0],
-    segmentFraction: 0.55,
-  },
-  {
-    from: 5,
-    to: 0,
-    text: "Restart",
-    points: [475, 110, 530, 140, 530, 350, 40, 350, 40, 80],
-    segmentFraction: 0.55,
-  },
-  {
-    from: 7,
-    to: 0,
-    text: "Restart",
-    points: [440, 330, 440, 350, 40, 350, 40, 80],
-    segmentFraction: 0.5,
-  },
-  {
-    from: 7,
-    to: 0,
-    text: "Restart",
-    points: [640, -200, 640, -270, 40, -270, 40, 0],
-    segmentFraction: 0.7,
-  },
-  {
-    from: 8,
-    to: 0,
-    text: "Restart",
-    points: [680, -60, 710, -100, 710, -270, 40, -270, 40, 0],
-    segmentFraction: 0.7,
-  },
-  {
-    from: 9,
-    to: 0,
-    text: "Restart",
-    points: [680, 140, 710, 180, 710, 350, 40, 350, 40, 80],
-    segmentFraction: 0.7,
-  },
-  {
-    from: 10,
-    to: 0,
-    text: "Restart",
-    points: [640, 280, 640, 350, 40, 350, 40, 80],
-    segmentIndex: 0,
-    segmentFraction: 0.7,
-  },
-  {
-    from: 11,
-    to: 0,
-    points: [876, -100, 1125, -100, 1125, -270, 40, -270, 40, 0],
-    segmentIndex: 0,
-    segmentFraction: 0.25,
-    text: "Restart",
-  },
-  {
-    from: 12,
-    to: 0,
-    points: [
-      870,
-      20,
-      870,
-      -30,
-      876,
-      -30,
-      1125,
-      -30,
-      1125,
-      -100,
-      1125,
-      -270,
-      40,
-      -270,
-      40,
-      0,
-    ],
-    segmentIndex: 1,
-    segmentFraction: 0.25,
-    text: "Restart",
-  },
-  {
-    from: 13,
-    to: 0,
-    text: "Restart",
-    points: [840, 205, 840, 350, 40, 350, 40, 80],
-    segmentIndex: 0,
-    segmentFraction: 0.5,
-  },
-  {
-    from: 14,
-    to: 0,
-    points: [1080, 40, 1125, 40, 1125, 350, 40, 350, 40, 80],
-    segmentIndex: 1,
-    segmentFraction: 0.5,
-    text: "Restart",
-  },
+  // {
+  //   from: 1,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [240, -100, 240, -270, 40, -270, 40, 0],
+  // },
+  // {
+  //   from: 2,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [240, 180, 240, 350, 40, 350, 40, 80],
+  // },
+  // {
+  //   from: 3,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [440, -250, 440, -270, 40, -270, 40, 0],
+  //   segmentFraction: 0.5,
+  // },
+  // {
+  //   from: 4,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [475, -30, 530, -60, 530, -270, 40, -270, 40, 0],
+  //   segmentFraction: 0.55,
+  // },
+  // {
+  //   from: 5,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [475, 110, 530, 140, 530, 350, 40, 350, 40, 80],
+  //   segmentFraction: 0.55,
+  // },
+  // {
+  //   from: 7,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [440, 330, 440, 350, 40, 350, 40, 80],
+  //   segmentFraction: 0.5,
+  // },
+  // {
+  //   from: 7,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [640, -200, 640, -270, 40, -270, 40, 0],
+  //   segmentFraction: 0.7,
+  // },
+  // {
+  //   from: 8,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [680, -60, 710, -100, 710, -270, 40, -270, 40, 0],
+  //   segmentFraction: 0.7,
+  // },
+  // {
+  //   from: 9,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [680, 140, 710, 180, 710, 350, 40, 350, 40, 80],
+  //   segmentFraction: 0.7,
+  // },
+  // {
+  //   from: 10,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [640, 280, 640, 350, 40, 350, 40, 80],
+  //   segmentIndex: 0,
+  //   segmentFraction: 0.7,
+  // },
+  // {
+  //   from: 11,
+  //   to: 0,
+  //   points: [876, -100, 1125, -100, 1125, -270, 40, -270, 40, 0],
+  //   segmentIndex: 0,
+  //   segmentFraction: 0.25,
+  //   text: "Restart",
+  // },
+  // {
+  //   from: 12,
+  //   to: 0,
+  //   points: [
+  //     870,
+  //     20,
+  //     870,
+  //     -30,
+  //     876,
+  //     -30,
+  //     1125,
+  //     -30,
+  //     1125,
+  //     -100,
+  //     1125,
+  //     -270,
+  //     40,
+  //     -270,
+  //     40,
+  //     0,
+  //   ],
+  //   segmentIndex: 1,
+  //   segmentFraction: 0.25,
+  //   text: "Restart",
+  // },
+  // {
+  //   from: 13,
+  //   to: 0,
+  //   text: "Restart",
+  //   points: [840, 205, 840, 350, 40, 350, 40, 80],
+  //   segmentIndex: 0,
+  //   segmentFraction: 0.5,
+  // },
+  // {
+  //   from: 14,
+  //   to: 0,
+  //   points: [1080, 40, 1125, 40, 1125, 350, 40, 350, 40, 80],
+  //   segmentIndex: 1,
+  //   segmentFraction: 0.5,
+  //   text: "Restart",
+  // },
 ];
 
 var $ = go.GraphObject.make; // for conciseness in defining templates
@@ -856,7 +856,7 @@ function init() {
         go.Point.stringify
       ),
       $(go.Shape, "Circle", {
-        fill: "#d1d4c9" /* green */,
+        fill: "#e9caf0 " /* green */,
         stroke: null,
         portId: "",
         fromLinkable: true,
@@ -871,7 +871,7 @@ function init() {
         go.TextBlock,
         "Start",
         {
-          font: "bold 13pt Bai Jamjuree, sans-serif",
+          font: "bold 10pt Bai Jamjuree, sans-serif",
           textAlign: "center",
           stroke: "black",
         },
@@ -889,7 +889,7 @@ function init() {
         go.Point.stringify
       ),
       $(go.Shape, "Circle", {
-        fill: "#ff6768" /* green */,
+        fill: "#f67676" /* green */,
         stroke: null,
         portId: "",
         fromLinkable: true,
@@ -1001,7 +1001,7 @@ function init() {
         margin: 4,
         segmentIndex: 0,
         segmentFraction: 0.2,
-        background: "#121212",
+        // background: "#ffffff",
       },
       new go.Binding("text").makeTwoWay(),
       new go.Binding("segmentIndex").makeTwoWay(),
@@ -1016,14 +1016,14 @@ function init() {
   highlighter = $(
     go.Part,
     "Auto",
-    {
+    {    
       layerName: "Background",
       selectable: false,
       isInDocumentBounds: false,
       locationSpot: go.Spot.Center,
     },
     $(go.Shape, "Ellipse", {
-      fill: $(go.Brush, "Radial", { 0.5: "#ff004d", 1.0: "rgba(0, 0, 0, 0)" }),    // shadow highlight
+      fill: $(go.Brush, "Radial", { 0.5: "#dd9ded", 1.0: "rgba(250,250, 250, 0)" }), // shadow highlight
       stroke: null,
       desiredSize: new go.Size(150, 150),
     })
@@ -1036,8 +1036,8 @@ function init() {
 
   highlightNode(machine.current_State.key);
   resetPathColor();
-  highlightPath(-1, 0, "#f30a49", "#F08080", "#17b794", "#40E0D0");
-}
+  highlightPath(-1, 0, "#f30a49", "#F08080", "#74acf2", "#1e77b7");
+} 
 
 ////////////////////////////////////////////////////////////////////////////
 ///////////////////// frame edit ////////////////////////////////
@@ -1054,7 +1054,7 @@ function restart() {
     document.getElementById(bottonList[i]).checked = false;
   }
   resetPathColor();
-  highlightPath(-1, 0, "#f30a49", "#F08080", "#17b794", "#40E0D0");
+  highlightPath(-1, 0, "#f24726", "#F08080", "#17b794", "#40E0D0");
   Botton.state = {
     ข้าว: false,
     อาหารเม็ด: false,
@@ -1107,10 +1107,11 @@ function handleClick(bottonName) {
   highlightPath(
     machine.current_State.key,
     next.key,
-    "#f30a49",
-    "#F08080",
-    "#17b794",
-    "#40E0D0"
+    // "#f30a49",
+    // "#F08080",
+    // "#17b794",
+    // "#40E0D0"
+    "#f30a49", "#F08080", "#74acf2", "#666666"
   );
 
   // highlight next state
@@ -1126,7 +1127,7 @@ function handleClick(bottonName) {
       Botton.state[mixer[i]] = false;
     }
   }
-
+    
   if (next.name == "Start_state") {
     document.getElementById("pednoi").checked = false;
     Botton.state["เผ็ดน้อย"] = false;
@@ -1205,7 +1206,7 @@ function resetPathColor() {
   for (let i = 0; i < 16; i++) {
     for (let j = 0; j < 16; j++) {
       // highlightPath(i,j,'#666666','#666666')
-      highlightPath(i, j, "#9C9C9C", "#9C9C9C", "#9C9C9C", "#9C9C9C");
+      highlightPath(i, j, "#7e7e7e", "#7e7e7e", "#7e7e7e", "##7e7e7e");
       highlightPath(-1, -1, "#f30a49", "#f30a49", "#f30a49", "#f30a49");
     }
   }
@@ -1246,8 +1247,6 @@ let Botton = {
   },
 };
 
-
-
 let imgmap = {
   Start_state: "xxx",
   ข้าว: "1rice",
@@ -1262,22 +1261,13 @@ let imgmap = {
   อาหารเม็ดใส่ปลาย่าง_ขนมแมว: "10grillFishMed-S",
   น้อนอ้วก: "11:Yucky",
   น้อนถูกใจสิ่งนี้: "12Like",
-  น้อนไม่กิน: "13Nope"
+  น้อนไม่กิน: "13Nope",
 };
 
 let mixer = ["ปูเค็ม", "หมูยอ", "ไข่เค็ม"];
 let lfc1 = [
-  // "Start_state",
-  // "ตำไทย_เผ็ดน้อย",
-  // "ตำไทย_เผ็ดมาก",
-  // "ปูเค็ม_เผ็ดน้อย",
-  // "หมูยอ_เผ็ดน้อย",
-  // "ไข่เค็ม_เผ็ดน้อย",
-  // "ปูเค็ม_เผ็ดมาก",
-  // "หมูยอ_เผ็ดมาก",
-  // "ไข่เค็ม_เผ็ดมาก",
   "Start_state",
-  "ข้าว",
+  "ข้าว ",
   "อาหารเม็ด",
   "ข้าวหน้าปลาดิบ",
   "ข้าวหน้าปลาย่าง",
@@ -1288,4 +1278,12 @@ let lfc1 = [
 let lfc2 = ["Start_state", "ข้าว", "อาหารเม็ด"]; // same
 let lfc3 = [];
 
-let bottonList = ["ข้าว", "อาหารเม็ด", "ปลาดิบ", "ปลาย่าง", "ขนมแมว", "Confirm", "Reset"];
+let bottonList = [
+  "ข้าว",
+  "อาหารเม็ด",
+  "ปลาดิบ",
+  "ปลาย่าง",
+  "ขนมแมว",
+  "Confirm",
+  "Reset",
+];
