@@ -10,6 +10,9 @@ document.addEventListener(
     document
       .getElementById("memberContentButton")
       .addEventListener("click", closeMemberPopup);
+    document
+      .getElementById("infoContentItem2Button")
+      .addEventListener("click", closeInfoPopup);
   },
   false
 );
@@ -26,6 +29,26 @@ function closeMemberPopup() {
 }
 function showInfoPopup(imageName) {
   document.getElementById("infoContentItem1Image").src =
-    "./images/" + imageName;
+    "./src/img" + imageName;
+  if (imageName == "ข้าว.png") {
+    document.getElementById("info-content-item2-text").innerHTML =
+      "นี่คือข้าวสวยร้อน ๆ";
+  } else if (imageName == "ขนมแมว.png") {
+    document.getElementById("info-content-item2-text").innerHTML =
+      "นี่คือข้าวขนมแมวยังไงล่ะ";
+  } else if (imageName == "ปลา1.png") {
+    document.getElementById("info-content-item2-text").innerHTML =
+      "นี่คือปลาย่างยังไงล่ะ";
+  } else if (imageName == "ปลา2.png") {
+    document.getElementById("info-content-item2-text").innerHTML =
+      "นี่คือปลาแซลมอนยังไงล่ะ";
+  } else if (imageName == "ปลา2.png") {
+    document.getElementById("info-content-item2-text").innerHTML =
+      "นี่คืออาหารเม็ดสำหรับน้อนแมววว";
+  }
+
   document.getElementById("infoPopup").style.display = "block";
+}
+function closeInfoPopup() {
+  document.getElementById("infoPopup").style.display = "none";
 }

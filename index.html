@@ -5,10 +5,15 @@
     <title>Meaw Meaw Cat Food</title>
     <meta name="description" content="The HTML5 Herald" />
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   </head>
   <body>
     <h1>Meaw Meaw World</h1>
-    <button class="member-button" id="memberButton">สมาชิกในกลุ่ม</button>
+    <div class="member-button" id="memberButton" style="background:transparent;">
+      <span class="material-icons-round noselect" style="font-size:100px;color:#e9caf0;cursor: pointer;">
+        groups
+        </span>
+    </div>
     <!-- --------------------------instruction-popup--------------------------- -->
     <div class="instruction-popup" id="instructionPopup">
       <!-- --------------------------instruction-content------------------------- -->
@@ -26,7 +31,9 @@
           <p>หมายเหตุ หลังจากกด Confirm แล้วจะเปลี่ยนเมนูไม่ได้ต้องกดปุ่ม Restart เท่านั้น</p>
           <p>พร้อมแล้วก็กดเริ่มได้เลยเมี๊ยวววว ~~</p>
         </p>
-        <button class="instruction-content-button" id="instructionStartButton">เริ่ม</button>
+        <button class="instruction-content-button" id="instructionStartButton">
+         เริ่ม
+        </button>
       </div>
       <!-- --------------------------/instruction-content------------------------- -->
     </div>
@@ -36,6 +43,11 @@
     <div class="member-popup" id="memberPopup">
       <!-- --------------------------member-content--------------------------- -->
       <div class="member-content">
+        <div class="member-content-button" id="memberContentButton" >
+          <span class="material-icons-round noselect" style="font-size:50px;color:#ce2d12;cursor: pointer;">
+            cancel
+            </span>
+        </div>
         <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
         <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
         <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
@@ -43,7 +55,7 @@
         <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
         <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
         <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
-        <button class="member-content-button" id="memberContentButton">close</button>
+       
       </div>
       <!-- --------------------------/member-content--------------------------- -->
     </div>
@@ -57,19 +69,20 @@
           <img
             class="info-content-item1-image"
             id="infoContentItem1Image"
-            src=""
+            src="./src/img/ข้าว.png"
             width="400px"
-            height="350px"
+            height="400px"
             alt="rice"
-            style="margin-top:5%;"
           />
         </div>
         <div class="info-content-item2">
-          <p>...........................</p>
-          <p>...........................</p>
-          <p>...........................</p>
-          <p>...........................</p>
+          <div class="info-content-item2-button" id="infoContentItem2Button"> 
+            <span class="material-icons-round noselect" style="font-size:50px;color:#ce2d12;cursor: pointer;">
+            cancel
+            </span></div>
+          <h1 id="info-content-item2-text">นี่คือข้าวสวยร้อน ๆ</h1>
         </div>
+        
       </div>
       <!-- --------------------------/info-content-------------------------- -->
     </div>
