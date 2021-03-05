@@ -45,10 +45,11 @@
 .member-content-button {
   position: absolute;
   right: 10%;
+  top: 10%;
 }
 
 .info-popup {
-  display: block; /* Hidden by default */
+  display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   padding-top: 5%; /* Location of the box */
@@ -84,6 +85,52 @@
   background-color: green;
 }
 .info-content-item1-image {
+  width: 50%;
+  height: 75%;
+}
+.member-button {
+  position: fixed;
+  right: 5%;
+  top: 5%;
+}
+
+.result-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  text-align: center;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.result-content {
+  display: flex;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.result-content-button {
+  position: absolute;
+  right: 10%;
+}
+.result-content-item1 {
+  width: 50%;
+  height: 200px;
+  background-color: blue;
+}
+.result-content-item2 {
+  width: 50%;
+  height: 200px;
+  background-color: green;
+}
+.result-content-item1-image {
   width: 50%;
   height: 75%;
 }

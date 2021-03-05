@@ -8,42 +8,60 @@
   </head>
   <body>
     <h1>Meaw Meaw World</h1>
-    <!-- instruction-popup-->
-    <div class="instruction-popup">
-      <!-- instruction-content -->
+    <button class="member-button" id="memberButton">สมาชิกในกลุ่ม</button>
+    <!-- --------------------------instruction-popup--------------------------- -->
+    <div class="instruction-popup" id="instructionPopup">
+      <!-- --------------------------instruction-content------------------------- -->
       <div class="instruction-content">
-        <p>instruction popup content..</p>
-        <button class="instruction-content-button">เริ่ม</button>
+        <h1>Meaw Meaw Food</h1>
+        <p>วิธีใช้งาน</p>
+        <p>
+          <ol>
+            <li>เลือกอาหารหลัก</li>
+            <li>เลือกปลา</li>
+            <li>เลือกขนมหรือไม่ก็ได้ สามารถยกเลิกโดยกดที่ไอคอนขนมอีกครั้งหนึ่ง</li>
+            <li>สามารถเปลี่ยนเมนูไปมาได้โดยกดที่ไอคอนของเมนูเลย</li>
+            <li>เมื่อเลือกเรียบร้อยแล้วให้กด Confirm</li>
+          </ol>
+          <p>หมายเหตุ หลังจากกด Confirm แล้วจะเปลี่ยนเมนูไม่ได้ต้องกดปุ่ม Restart เท่านั้น</p>
+          <p>พร้อมแล้วก็กดเริ่มได้เลยเมี๊ยวววว ~~</p>
+        </p>
+        <button class="instruction-content-button" id="instructionStartButton">เริ่ม</button>
       </div>
-      <!-- /instruction-content -->
+      <!-- --------------------------/instruction-content------------------------- -->
     </div>
-    <!-- /instruction-popup-->
-    <!-- member-popup-->
-    <div class="member-popup">
-      <!-- member-content -->
+    <!--  --------------------------/instruction-popup------------------------- -->
+
+    <!-- --------------------------member-popup--------------------------- -->
+    <div class="member-popup" id="memberPopup">
+      <!-- --------------------------member-content--------------------------- -->
       <div class="member-content">
-        <p>มิงค์</p>
-        <p>ฟาง</p>
-        <p>แป้ง</p>
-        <p>เจต</p>
-        <p>ออมสิน</p>
-        <p>ไอซ์</p>
-        <p>เกม</p>
-        <button class="member-content-button">เริ่ม</button>
+        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
+        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
+        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
+        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
+        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
+        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
+        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
+        <button class="member-content-button" id="memberContentButton">close</button>
       </div>
-      <!-- /member-content -->
+      <!-- --------------------------/member-content--------------------------- -->
     </div>
-    <!-- /member-popup-->
-    <!-- info-popup-->
-    <div class="info-popup">
-      <!-- info-content -->
+    <!-- --------------------------/member-popup--------------------------- -->
+
+    <!-- --------------------------info-popup-------------------------- -->
+    <div class="info-popup" id="infoPopup">
+      <!-- --------------------------info-content-------------------------- -->
       <div class="info-content">
-        <div class=""></div>
         <div class="info-content-item1">
           <img
             class="info-content-item1-image"
-            src="./images/rice.png"
+            id="infoContentItem1Image"
+            src=""
+            width="400px"
+            height="350px"
             alt="rice"
+            style="margin-top:5%;"
           />
         </div>
         <div class="info-content-item2">
@@ -53,9 +71,34 @@
           <p>...........................</p>
         </div>
       </div>
-      <!-- /info-content -->
+      <!-- --------------------------/info-content-------------------------- -->
     </div>
-    <!-- /info-popup-->
+    <!-- --------------------------/info-popup -------------------------- -->
+
+
+    
+    <!-- --------------------------result-popup-------------------------- -->
+    <div class="result-popup" >
+      <!-- --------------------------result-content-------------------------- -->
+      <div class="result-content">
+        <div class=""></div>
+        <div class="result-content-item1">
+          <img
+            class="result-content-item1-image"
+            src="./images/rice.png"
+            alt="rice"
+          />
+        </div>
+        <div class="result-content-item2">
+          <p>...........................</p>
+          <p>...........................</p>
+          <p>...........................</p>
+          <p>...........................</p>
+        </div>
+      </div>
+      <!-- --------------------------/result-content-------------------------- -->
+    </div>
+    <!-- --------------------------/result-popup -------------------------- -->
     <script src="scripts.js"></script>
   </body>
 </html>
