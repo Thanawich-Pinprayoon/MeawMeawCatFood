@@ -3,6 +3,46 @@
 	margin: 0;
 	font-family: cursive;
 }
+.instruction-popup {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.instruction-content {
+  background-color: #f4f1bc;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: #0da789;
+  box-shadow: 5px 5px 5px #857d7b;
+}
+.instruction-content-button {
+  position: relative;
+  left: 80%;
+  bottom: 45%;
+  width: 100px;
+  height: 50px;
+  background-color: #f24726;
+  color: white;
+  border-radius: 50%;
+  margin-left: 25px;
+  font-size: 16px;
+  box-shadow: 0 10px #ce2d12;
+  cursor: pointer;
+}
+.instruction-content-button :hover {
+  box-shadow: 0 10px #ce2d12;
+  transform: translate3D(0, -5px, 0);
+}
 
 .container1 {
 	background-color: aqua;
@@ -192,3 +232,140 @@
 
 }
 /*----------------------------------*/
+
+.instruction-content-button :active {
+  transform: translate3D(0, 5px, 0);
+  box-shadow: 0 3px #ce2d12;
+}
+
+.member-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  right: 5%;
+  top: 0;
+  width: 20%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  text-align: center;
+}
+.member-content {
+  background-color: #e9caf0;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid #888;
+  border-radius: 25px;
+  width: 80%;
+  color: #6c36b7;
+}
+.member-content-button {
+  position: absolute;
+  top: 7%;
+  right: 3%;
+  text-shadow: 0 4px rgb(150, 5, 5);
+}
+
+.info-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  text-align: center;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.info-content {
+  display: flex;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 60%;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+.info-content-item1 {
+  width: 50%;
+  height: 200px;
+  padding-top: 10%;
+}
+.info-content-item2 {
+  width: 50%;
+  height: 200px;
+  color: #f24726;
+  padding-top: 10%;
+}
+.info-content-item1-image {
+  width: 50%;
+  height: 75%;
+}
+.info-content-item2-button {
+  position: absolute;
+  right: 8%;
+  top: 6%;
+  text-shadow: 0 4px rgb(150, 5, 5);
+}
+.member-button {
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  font-size: 100px;
+  color: #e9caf0;
+  text-shadow: 0 5px #a73fbe;
+}
+
+.result-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  text-align: center;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+.result-content {
+  display: flex;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 5px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.result-content-button {
+  position: absolute;
+  right: 10%;
+}
+.result-content-item1 {
+  width: 50%;
+  height: 200px;
+  background-color: blue;
+}
+.result-content-item2 {
+  width: 50%;
+  height: 200px;
+  background-color: green;
+}
+.result-content-item1-image {
+  width: 50%;
+  height: 75%;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently*/
+}
