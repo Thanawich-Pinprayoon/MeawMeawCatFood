@@ -1,7 +1,7 @@
 * {
-	padding: 0;
-	margin: 0;
-	font-family: cursive;
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
 }
 .instruction-popup {
   display: block; /* Hidden by default */
@@ -45,191 +45,190 @@
 }
 
 .container1 {
-	background-color: aqua;
-	height: 100%;
-	width: 100vw;
-	background-image: url("./src/img/bg.jpg");
-	background-size: contain;
+  background-color: aqua;
+  height: 100%;
+  width: 100vw;
+  background-image: url("./src/img/bg.jpg");
+  background-size: contain;
 }
 
 .topic {
-	background-color: #e9caf0;
-	width: 100%;
-	height: 60px;
-	text-align: center;
-	padding-top: 20px;
-	font-family: cursive;
-	box-shadow: 0px 5px 5px #e795fa;
+  background-color: #e9caf0;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+  font-family: cursive;
+  box-shadow: 0px 5px 5px #e795fa;
 }
 
 .container2 {
-	display: flex;
-	/* background-color: darkorange; */
-	width: 100%;
-	height: 90%;
-	justify-content: space-evenly;
-	margin-top: 10px;
+  display: flex;
+  /* background-color: darkorange; */
+  width: 100%;
+  height: 90%;
+  justify-content: space-evenly;
+  margin-top: 10px;
 }
 
 .container3 {
-	display: flex;
-	width: 70%;
-	/* background-color: forestgreen; */
-	flex-direction: column;
-	padding: 10px;
-	justify-content: space-around;
+  display: flex;
+  width: 70%;
+  /* background-color: forestgreen; */
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-around;
 }
 
 .dfa {
-	/* background-color: gold; */
-	height: 70%;
-	width: 100%;
-	border-radius: 50px;
-	border: 5px solid #e795fa;
-	background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: gold; */
+  height: 70%;
+  width: 100%;
+  border-radius: 50px;
+  border: 5px solid #e795fa;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .input {
-	/* background-color: greenyellow; */
-	width: 100%;
-	height: 25%;
-	border-radius: 50px;
-	border: 5px solid #e795fa;
-	background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: greenyellow; */
+  width: 100%;
+  height: 25%;
+  border-radius: 50px;
+  border: 5px solid #e795fa;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .container4 {
-	padding: 10px;
-	width: 25%
+  padding: 10px;
+  width: 25%;
 }
 
 .selector {
-	height: 91%;
-	border-radius: 50px;
-	border: 5px solid #e795fa;
-	background-color: rgba(255, 255, 255, 0.5);
-	padding: 20px;
+  height: 91%;
+  border-radius: 50px;
+  border: 5px solid #e795fa;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
 }
 
 .Header {
-	text-align: center;
-	font-size: 22px;
-	color: #6c36b7;
-	font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+  color: #6c36b7;
+  font-weight: bold;
 }
 
 .textinput {
-	font-size: 20px;
-	padding: 20px;
-	margin-left: 10px;
+  font-size: 20px;
+  padding: 20px;
+  margin-left: 10px;
 }
 
 .ButtonRe {
-	/*Restart*/
-	width: 100px;
-	height: 50px;
-	background-color: #ce2d12;
-	color: white;
-	border-radius: 50%;
-	margin-left: 20px;
-	font-size: 16px;
-	box-shadow: 0 10px rgb(150, 5, 5);
-    cursor: pointer;
+  /*Restart*/
+  width: 100px;
+  height: 50px;
+  background-color: #ce2d12;
+  color: white;
+  border-radius: 50%;
+  margin-left: 20px;
+  font-size: 16px;
+  box-shadow: 0 10px rgb(150, 5, 5);
+  cursor: pointer;
 }
 
 .ButtonRe:hover {
-	transform: translate3D(0, -5px, 0);
+  transform: translate3D(0, -5px, 0);
 }
 
 .ButtonRe:active {
-	transform: translate3D(0, 5px, 0);
-	box-shadow: 0 3px rgb(150, 5, 5);
+  transform: translate3D(0, 5px, 0);
+  box-shadow: 0 3px rgb(150, 5, 5);
 }
 
 .ButtonCon {
-	/*Confirm*/
-	width: 100px;
-	height: 50px;
-	background-color: #0da789;
-	color: white;
-	border-radius: 50%;
-	margin-left: 25px;
-	font-size: 16px;
-	box-shadow: 0 10px #008066;
-    cursor: pointer;
+  /*Confirm*/
+  width: 100px;
+  height: 50px;
+  background-color: #0da789;
+  color: white;
+  border-radius: 50%;
+  margin-left: 25px;
+  font-size: 16px;
+  box-shadow: 0 10px #008066;
+  cursor: pointer;
 }
 
 .ButtonCon:hover {
-	box-shadow: 0 10px #008066;
-	transform: translate3D(0, -5px, 0);
+  box-shadow: 0 10px #008066;
+  transform: translate3D(0, -5px, 0);
 }
 
 .ButtonCon:active {
-	transform: translate3D(0, 5px, 0);
-	box-shadow: 0 3px #008066;
+  transform: translate3D(0, 5px, 0);
+  box-shadow: 0 3px #008066;
 }
 
 .hr {
-	height: 5px;
-	background-color: #fac710;
-	border: none;
-	border-radius: 10px;
-	box-shadow: 1px 2px 3px #f1d56d;
+  height: 5px;
+  background-color: #fac710;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px #f1d56d;
 }
 
 .t {
-	padding-top: 10px;
-	padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .Button-i {
-	background-color: #2d9bf0;
-	border-radius: 10px;
-	width: 20px;
-	height: 20px;
-	color: white;
-	font-size: 10px;
-	transform: translateX(-20px);
-    cursor: pointer;
+  background-color: #2d9bf0;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  color: white;
+  font-size: 10px;
+  transform: translateX(-20px);
+  cursor: pointer;
 }
 
 .Button-i:hover {
-	box-shadow: 0 0 5px #2d9bf0;
+  box-shadow: 0 0 5px #2d9bf0;
 }
 
 .food {
-	display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .snack {
-    display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
-.snack .Button-i{
-    transform: translateX(-100px);
+.snack .Button-i {
+  transform: translateX(-100px);
 }
 
 .minifood {
-	position: relative;
+  position: relative;
 }
 
 /*-------------รูปอาหาร--------------*/
-.Button-pic{
-    background-color: transparent;
-    border: transparent;
-    cursor: pointer;
+.Button-pic {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
 }
 
-.Button-pic:hover{
-    border: #f24726;
-    box-shadow: 0 0 10px #f24726;
+.Button-pic:hover {
+  border: #f24726;
+  box-shadow: 0 0 10px #f24726;
 }
 
-.Button-pic:active{
-    /*box-shadow: 0 0 10px #f24726*/
-
+.Button-pic:active {
+  /*box-shadow: 0 0 10px #f24726*/
 }
 /*----------------------------------*/
 
@@ -245,7 +244,7 @@
   padding-top: 5%; /* Location of the box */
   right: 5%;
   top: 0;
-  width: 20%; /* Full width */
+  width: 25%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   text-align: center;
@@ -256,13 +255,14 @@
   padding: 5px;
   border: 1px solid #888;
   border-radius: 25px;
-  width: 80%;
+  width: 95%;
   color: #6c36b7;
+  font-size: 20px;
 }
 .member-content-button {
   position: absolute;
-  top: 7%;
-  right: 3%;
+  top: 6%;
+  left: 85%;
   text-shadow: 0 4px rgb(150, 5, 5);
 }
 
@@ -315,10 +315,10 @@
 .member-button {
   position: fixed;
   right: 5%;
-  top: 5%;
+  top: -3%;
   font-size: 100px;
-  color: #e9caf0;
-  text-shadow: 0 5px #a73fbe;
+  color: #0da789;
+  text-shadow: 0 5px #008066;
 }
 
 .result-popup {
