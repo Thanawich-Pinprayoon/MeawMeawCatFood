@@ -59,7 +59,7 @@
 
 .container1 {
 	background-color: aqua;
-	height: 100%;
+	height: 100vh;
 	width: 100vw;
 	background-repeat: repeat;
 	background-image: url("./src/img/bg.jpg");
@@ -118,11 +118,14 @@
 }
 
 .selector {
-	height: 91%;
+	height: 95%;
 	border-radius: 50px;
 	border: 5px solid #e795fa;
 	background-color: rgba(255, 255, 255, 0.5);
 	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
 .Header {
@@ -203,31 +206,38 @@
 
 .Button-i {
 	background-color: #2d9bf0;
-	border-radius: 10px;
-	width: 20px;
-	height: 20px;
+	border-style: none;
+	border-radius: 50%;
+	width: 1.5vw;
+	height: 1.5vw;
 	color: white;
-	font-size: 10px;
+	font-size: 1vw;
 	transform: translateX(-20px);
 	cursor: pointer;
+	position: relative;
+  	top: 0px;
+  	right: 0px;
 }
 
 .Button-i:hover {
 	box-shadow: 0 0 5px #2d9bf0;
 }
 
-.food {
+.foods {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
+	
+}
+.food{
+	display: flex;
+	position: relative;
+	
 }
 
 .snack {
 	display: flex;
-	justify-content: space-around;
-}
-
-.snack .Button-i {
-	transform: translateX(-100px);
+	justify-content: flex-start;
+	padding: 0px 20%;
 }
 
 .minifood {
@@ -242,9 +252,16 @@
 	border: transparent;
 	cursor: pointer;
 	outline: none;
+	appearance: none;
+	
 }
 
-.Button-pic img:hover {
+.food-img{
+
+	height: 7vw;
+}
+
+label img:hover {
 	border: #f24726;
 	/* box-shadow: 0 0 10px #f24726; */
 	-webkit-filter: drop-shadow(0px 0px 10px #f24726);

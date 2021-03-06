@@ -788,7 +788,7 @@ function init() {
         var animation = e.subject.defaultAnimation;
         animation.easing = go.Animation.EaseOutExpo;
         animation.duration = 1000;
-        animation.add(e.diagram, "scale", 0.1, 0.65);
+        animation.add(e.diagram, "scale", 0.1, 1.2);
         animation.add(e.diagram, "opacity", 0, 1);
       },
 

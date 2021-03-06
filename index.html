@@ -2,179 +2,202 @@
 <html>
 
 <head>
-	<meta charset="utf-8" />
-	<title>Meaw Meaw Cat Food</title>
-	<meta name="description" content="This is Meaw Meaw Cat Food Web Application" />
-	<link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  <meta charset="utf-8" />
+  <title>Meaw Meaw Cat Food</title>
+  <meta name="description" content="This is Meaw Meaw Cat Food Web Application" />
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
   <script src="lib/go.js?v=1001"></script>
   <script src="state.js?v=1001"></script>
   <script src="GoJs.js?v=1001"></script>
 </head>
 
 <body>
-	<div class="container1">
-		<div class="topic">
-			<h1>Meaw Meaw Cat Food</h1>
+  <div class="container1">
+    <div class="topic">
+      <h1>Meaw Meaw Cat Food</h1>
       <div class="member-button" id="memberButton">
         <span class="material-icons-round noselect" style="font-size:100px;color:#0da789;cursor: pointer;">
-          groups 
+          groups
         </span>
       </div>
-		</div>
-		<div class="container2">
-
-			<div class="container3">
-				<div class="dfa" id="myDiagramDiv"></div>
-				
-        <div class="input">
-					<p class="textinput">Input :<p id="inputstring"></p></p>
-				</div>
-
-			</div>
-
-			<div class="container4">
-				<div class="selector">
-					<p class="Header">Choose a Cat Food</p>
-
-					<p class="t">1: Main Food</p>
-					<div class="food">
-						<button class="Button-pic" onclick="handleClick('อาหารเม็ด')"><img src="./src/img/อาหารเม็ด.png" alt="อาหารเม็ด" height="90"></button>
-						<button class="Button-i" id="pelletFood">i</button>
-
-						<button class="Button-pic" onclick="handleClick('ข้าว')"><img src="./src/img/ข้าว.png" alt="ข้าว" height="90"></button>
-						<button class="Button-i" id="rice">i</button>
-
-					</div>
-					<hr class="hr">
-
-					<p class="t">2: Fish</p>
-					<div class="food">
-						<button class="Button-pic" onclick="handleClick('ปลาย่าง')"><img src="./src/img/ปลา1.png" alt="ปลา1" height="90"></button>
-						<button class="Button-i" id="grillFish">i</button>
-
-						<button class="Button-pic" onclick="handleClick('ปลาดิบ')"><img src="./src/img/ปลา2.png" alt="ปลา2" height="90"></button>
-						<button class="Button-i" id="salmon">i</button>
-					</div>
-					<hr class="hr">
-
-					<p class="t">3: Snack</p>
-					<div class="snack">
-						<button class="Button-pic" onclick="handleClick('ขนมแมว')"><img src="./src/img/ขนมแมว.png" alt="ขนมแมว" height="85"></button>
-						<button class="Button-i" id="snack">i</button>
-					</div>
-					<br>
-
-					<div class="food">
-						<button class="ButtonRe" onclick="restart()">Restart</button>
-						<button class="ButtonCon" onclick="handleClick('Confirm')">Confirm</button>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-   
-    <!-- --------------------------instruction-popup--------------------------- -->
-    <div class="instruction-popup" id="instructionPopup">
-      <!-- --------------------------instruction-content------------------------- -->
-      <div class="instruction-content">
-        <h1>Meaw Meaw Food</h1>
-        <p>วิธีใช้งาน</p>
-        <p>
-          <ol>
-            <li>เลือกอาหารหลัก</li>
-            <li>เลือกปลา</li>
-            <li>เลือกขนมหรือไม่ก็ได้ สามารถยกเลิกโดยกดที่ไอคอนขนมอีกครั้งหนึ่ง</li>
-            <li>สามารถเปลี่ยนเมนูไปมาได้โดยกดที่ไอคอนของเมนูเลย</li>
-            <li>เมื่อเลือกเรียบร้อยแล้วให้กด Confirm</li>
-          </ol>
-          <p>หมายเหตุ หลังจากกด Confirm แล้วจะเปลี่ยนเมนูไม่ได้ต้องกดปุ่ม Restart เท่านั้น</p>
-          <p>พร้อมแล้วก็กดเริ่มได้เลยเมี๊ยวววว ~~</p>
-        </p>
-        <button class="instruction-content-button" id="instructionStartButton" onclick="init()">
-         เริ่ม
-        </button>
-      </div>
-      <!-- --------------------------/instruction-content------------------------- -->
     </div>
-    <!--  --------------------------/instruction-popup------------------------- -->
+    <div class="container2">
 
-    <!-- --------------------------member-popup--------------------------- -->
-    <div class="member-popup" id="memberPopup">
-      <!-- --------------------------member-content--------------------------- -->
-      <div class="member-content">
-        <div class="member-content-button" id="memberContentButton" >
+      <div class="container3">
+        <div class="dfa" id="myDiagramDiv"></div>
+
+        <div class="input">
+          <p class="textinput">Input :
+          <p id="inputstring"></p>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="container4">
+        <div class="selector">
+          <p class="Header">Choose a Cat Food</p>
+
+          <p class="t">1: Main Food</p>
+          <div class="foods">
+
+            <div class="food">
+              <input id="btn-1" type="radio" class="Button-pic" onclick="handleClick('อาหารเม็ด')">
+              <label for="btn-1">
+                <img class="food-img" src="./src/img/อาหารเม็ด.png" alt="อาหารเม็ด" height="90">
+              </label>
+              <button class="Button-i" id="pelletFood">i</button>
+            </div>
+
+            <div class="food">
+              <input id="btn-2" type="radio" class="Button-pic" onclick="handleClick('ข้าว')">
+              <label for="btn-2">
+                <img class="food-img" src="./src/img/ข้าว.png" alt="ข้าว" height="90">
+              </label>
+              <button class="Button-i" id="rice">i</button>
+            </div>
+
+          </div>
+          <hr class="hr">
+
+          <p class="t">2: Fish</p>
+
+          <div class="foods">
+            <div class="food">
+              <input id="btn-3" type="radio" class="Button-pic" onclick="handleClick('ปลาย่าง')">
+              <label for="btn-3">
+                <img class="food-img" src="./src/img/ปลา1.png" alt="ปลา1" height="90">
+              </label>
+              <button class="Button-i" id="grillFish">i</button>
+            </div>
+
+            <div class="food">
+              <input id="btn-4" type="radio" class="Button-pic" onclick="handleClick('ปลาดิบ')">
+              <label for="btn-4">
+                <img class="food-img" src="./src/img/ปลา2.png" alt="ปลา2" height="90">
+              </label>
+              <button class="Button-i" id="salmon">i</button>
+            </div>
+          </div>
+          <hr class="hr">
+
+          <p class="t">3: Snack</p>
+
+          <div class="snack">
+            <input id="btn-5" type="radio" class="Button-pic" onclick="handleClick('ขนมแมว')">
+            <label for="btn-5">
+              <img class="food-img" src="./src/img/ขนมแมว.png" alt="ขนมแมว" height="85">
+            </label>
+            <button class="Button-i" id="snack">i</button>
+
+          </div>
+          <br>
+
+          <div class="foods">
+            <button class="ButtonRe" onclick="restart()">Restart</button>
+            <button class="ButtonCon" onclick="handleClick('Confirm')">Confirm</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- --------------------------instruction-popup--------------------------- -->
+  <div class="instruction-popup" id="instructionPopup">
+    <!-- --------------------------instruction-content------------------------- -->
+    <div class="instruction-content">
+      <h1>Meaw Meaw Food</h1>
+      <p>วิธีใช้งาน</p>
+      <p>
+      <ol>
+        <li>เลือกอาหารหลัก</li>
+        <li>เลือกปลา</li>
+        <li>เลือกขนมหรือไม่ก็ได้ สามารถยกเลิกโดยกดที่ไอคอนขนมอีกครั้งหนึ่ง</li>
+        <li>สามารถเปลี่ยนเมนูไปมาได้โดยกดที่ไอคอนของเมนูเลย</li>
+        <li>เมื่อเลือกเรียบร้อยแล้วให้กด Confirm</li>
+      </ol>
+      <p>หมายเหตุ หลังจากกด Confirm แล้วจะเปลี่ยนเมนูไม่ได้ต้องกดปุ่ม Restart เท่านั้น</p>
+      <p>พร้อมแล้วก็กดเริ่มได้เลยเมี๊ยวววว ~~</p>
+      </p>
+      <button class="instruction-content-button" id="instructionStartButton" onclick="init()">
+        เริ่ม
+      </button>
+    </div>
+    <!-- --------------------------/instruction-content------------------------- -->
+  </div>
+  <!--  --------------------------/instruction-popup------------------------- -->
+
+  <!-- --------------------------member-popup--------------------------- -->
+  <div class="member-popup" id="memberPopup">
+    <!-- --------------------------member-content--------------------------- -->
+    <div class="member-content">
+      <div class="member-content-button" id="memberContentButton">
+        <span class="material-icons-round noselect" style="font-size:50px;color:#ce2d12;cursor: pointer;">
+          cancel
+        </span>
+      </div>
+      <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
+      <p>นายชริตา สุรนันทจักร์ 61010216</p>
+      <p>นายญาโณทัย อาปานุติกุล 61010260</p>
+      <p>นางสาวณัฐมน เปี่ยมฉวีวงศ์ 61010351</p>
+      <p>นายณัฐรัตน์ เสรีรัตน์ 61010352</p>
+      <p>นายธนวิชญ์ ปิ่นประยูร 61010456</p>
+      <p>นายสมพล พิมพ์พิศคนึง 61011066</p>
+
+    </div>
+    <!-- --------------------------/member-content--------------------------- -->
+  </div>
+  <!-- --------------------------/member-popup--------------------------- -->
+
+  <!-- --------------------------info-popup-------------------------- -->
+  <div class="info-popup" id="infoPopup">
+    <!-- --------------------------info-content-------------------------- -->
+    <div class="info-content">
+      <div class="info-content-item1">
+        <img class="info-content-item1-image" id="infoContentItem1Image" width="400px" height="400px" alt="gredient" />
+      </div>
+      <div class="info-content-item2">
+        <div class="info-content-item2-button" id="infoContentItem2Button">
           <span class="material-icons-round noselect" style="font-size:50px;color:#ce2d12;cursor: pointer;">
             cancel
-            </span>
+          </span>
         </div>
-        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
-        <p>นายชริตา สุรนันทจักร์ 61010216</p>
-        <p>นายญาโณทัย อาปานุติกุล 61010260</p>
-        <p>นางสาวณัฐมน เปี่ยมฉวีวงศ์ 61010351</p>
-        <p>นายณัฐรัตน์ เสรีรัตน์ 61010352</p>
-        <p>นายธนวิชญ์ ปิ่นประยูร 61010456</p>
-        <p>นายสมพล พิมพ์พิศคนึง 61011066</p>
-       
+        <h1 id="info-content-item2-text">นี่คือข้าวสวยร้อน ๆ</h1>
       </div>
-      <!-- --------------------------/member-content--------------------------- -->
-    </div>
-    <!-- --------------------------/member-popup--------------------------- -->
 
-    <!-- --------------------------info-popup-------------------------- -->
-    <div class="info-popup" id="infoPopup">
-      <!-- --------------------------info-content-------------------------- -->
-      <div class="info-content">
-        <div class="info-content-item1">
-          <img
-            class="info-content-item1-image"
-            id="infoContentItem1Image"
-            width="400px"
-            height="400px"
-            alt="gredient"
-          />
-        </div>
-        <div class="info-content-item2">
-          <div class="info-content-item2-button" id="infoContentItem2Button"> 
-            <span class="material-icons-round noselect" style="font-size:50px;color:#ce2d12;cursor: pointer;">
-            cancel
-            </span></div>
-          <h1 id="info-content-item2-text">นี่คือข้าวสวยร้อน ๆ</h1>
-        </div>
-        
-      </div>
-      <!-- --------------------------/info-content-------------------------- -->
     </div>
-    <!-- --------------------------/info-popup -------------------------- -->
+    <!-- --------------------------/info-content-------------------------- -->
+  </div>
+  <!-- --------------------------/info-popup -------------------------- -->
 
 
-    
-    <!-- --------------------------result-popup-------------------------- -->
-    <div class="result-popup" >
-      <!-- --------------------------result-content-------------------------- -->
-      <div class="result-content">
-        <div class=""></div>
-        <div class="result-content-item1">
-          <img
-            class="result-content-item1-image"
-            alt="rice"
-          />
-        </div>
-        <div class="result-content-item2">
-          <p>...........................</p>
-          <p>...........................</p>
-          <p>...........................</p>
-          <p>...........................</p>
-        </div>
+
+  <!-- --------------------------result-popup-------------------------- -->
+  <div class="result-popup">
+    <!-- --------------------------result-content-------------------------- -->
+    <div class="result-content">
+      <div class=""></div>
+      <div class="result-content-item1">
+        <img class="result-content-item1-image" alt="rice" />
       </div>
-      <!-- --------------------------/result-content-------------------------- -->
+      <div class="result-content-item2">
+        <p>...........................</p>
+        <p>...........................</p>
+        <p>...........................</p>
+        <p>...........................</p>
+      </div>
     </div>
-    <!-- --------------------------/result-popup -------------------------- -->
-  
-  </body>
-  <script src="scripts.js"></script>
+    <!-- --------------------------/result-content-------------------------- -->
+  </div>
+  <!-- --------------------------/result-popup -------------------------- -->
+
+</body>
+<script src="scripts.js"></script>
 
 </html>
