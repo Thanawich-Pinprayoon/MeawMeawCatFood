@@ -1,7 +1,15 @@
+const splash = document.querySelector('.splash');
+const whitescreen = document.querySelector('.whitescreen');
 document.addEventListener(
   "DOMContentLoaded",
   function () {
     console.log("Dom Loaded");
+    
+    setTimeout(()=>{
+      splash.classList.add('display-none');
+      whitescreen.classList.add('display-none');
+    }, 3000);
+    
     document
       .getElementById("instructionStartButton")
       .addEventListener("click", instructionStartButtonClickHandler);
