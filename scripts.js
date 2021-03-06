@@ -49,18 +49,28 @@ function showInfoPopup(imageName) {
   if (imageName == "ข้าว.png") {
     document.getElementById("info-content-item2-text").innerHTML =
       "นี่คือข้าวสวยร้อน ๆ";
+    document.getElementById("infoContentItem1Image").style.width = "300px";
+    document.getElementById("infoContentItem1Image").style.height = "300px";
   } else if (imageName == "ขนมแมว.png") {
     document.getElementById("info-content-item2-text").innerHTML =
       "นี่คือขนมแมวยังไงล่ะ";
+    document.getElementById("infoContentItem1Image").style.width = "200px";
+    document.getElementById("infoContentItem1Image").style.height = "300px";
   } else if (imageName == "ปลา1.png") {
     document.getElementById("info-content-item2-text").innerHTML =
       "นี่คือปลาย่างยังไงล่ะ";
+    document.getElementById("infoContentItem1Image").style.width = "300px";
+    document.getElementById("infoContentItem1Image").style.height = "300px";
   } else if (imageName == "ปลา2.png") {
     document.getElementById("info-content-item2-text").innerHTML =
       "นี่คือปลาแซลมอนยังไงล่ะ";
+    document.getElementById("infoContentItem1Image").style.width = "300px";
+    document.getElementById("infoContentItem1Image").style.height = "300px";
   } else if (imageName == "อาหารเม็ด.png") {
     document.getElementById("info-content-item2-text").innerHTML =
       "นี่คืออาหารเม็ดสำหรับน้อนแมววว";
+    document.getElementById("infoContentItem1Image").style.width = "300px";
+    document.getElementById("infoContentItem1Image").style.height = "300px";
   }
 
   document.getElementById("infoPopup").style.display = "block";
