@@ -32,9 +32,7 @@ let createBanner = () => {
   let random = Math.round(Math.random() * (kitties.length - 1));
   let div = document.createElement("div");
   div.innerHTML = `<img src="${kitties[random]}" height="60">`;
-  if (random === 1) {
-    flip(div);
-  }
+
   div.style.position = "absolute";
   div.style.top = "20px";
   div.style.zIndex = "0";

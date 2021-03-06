@@ -4,6 +4,19 @@
   font-family: cursive;
 }
 
+@font-face {
+  font-family: 'myFont';
+  src: url(./src/font/CatPaw.ttf);
+}
+
+.logo{
+  font-family: 'myFont';
+  text-align: center;
+  font-size: 40px;
+  color: #6c36b7;
+ 
+}
+
 #header-background {
   display: flex;
   height: 100%;
@@ -162,7 +175,9 @@
   font-size: 30px;
   color: #6c36b7;
   font-weight: bold;
+ 
 }
+
 
 .textinput {
   /* font-size: 1.5rem; */
