@@ -556,7 +556,7 @@ linkDataArray = [
     points: [1075, 20, 1190, 20, 1190, 60, 1075, 60],
     segmentIndex: 1,
     segmentFraction: 0.5,
-    text: "ข้าว,อาหารเม็ด\n,ปลาดิบ,ปลาย่าง,\nขนมแมว,Confirm\nRestart",
+    text: "ข้าว,อาหารเม็ด\n,ปลาดิบ,ปลาย่าง,\nขนมแมว,Confirm",
   },
 
   // น้อนไม่กิน
@@ -774,6 +774,8 @@ function init() {
     go.Diagram,
     "myDiagramDiv", // must name or refer to the DIV HTML element
     {
+      allowHorizontalScroll: false,
+      allowVerticalScroll: false,
       // grid: $(go.Panel, "Grid",
       //   { gridCellSize: new go.Size(10, 10) },
       //   $(go.Shape, "LineH", { stroke: "lightgray", strokeWidth: 0.5 }),
@@ -786,7 +788,7 @@ function init() {
         var animation = e.subject.defaultAnimation;
         animation.easing = go.Animation.EaseOutExpo;
         animation.duration = 1000;
-        animation.add(e.diagram, "scale", 0.1, 1);
+        animation.add(e.diagram, "scale", 0.1, 0.65);
         animation.add(e.diagram, "opacity", 0, 1);
       },
 
@@ -1016,14 +1018,17 @@ function init() {
   highlighter = $(
     go.Part,
     "Auto",
-    {    
+    {
       layerName: "Background",
       selectable: false,
       isInDocumentBounds: false,
       locationSpot: go.Spot.Center,
     },
     $(go.Shape, "Ellipse", {
-      fill: $(go.Brush, "Radial", { 0.5: "#dd9ded", 1.0: "rgba(250,250, 250, 0)" }), // shadow highlight
+      fill: $(go.Brush, "Radial", {
+        0.5: "#dd9ded",
+        1.0: "rgba(250,250, 250, 0)",
+      }), // shadow highlight
       stroke: null,
       desiredSize: new go.Size(150, 150),
     })
@@ -1037,16 +1042,13 @@ function init() {
   highlightNode(machine.current_State.key);
   resetPathColor();
   highlightPath(-1, 0, "#f30a49", "#F08080", "#74acf2", "#1e77b7");
-} 
+}
 
 ////////////////////////////////////////////////////////////////////////////
 ///////////////////// frame edit ////////////////////////////////
 
 function restart() {
   document.getElementById("inputstring").innerHTML = "";
-  document.getElementById("name").innerHTML = "ตำอะไรเอ่ย";
-  document.getElementById("imgout").src =
-    "image/" + imgmap["Start_state"] + ".png";
   machine.current_State = { name: "Start_state", key: 0 };
   machine.prev_State = { name: "none", key: -1 };
   highlightNode(machine.current_State.key);
@@ -1069,17 +1071,17 @@ function restart() {
 function handleClick(bottonName) {
   document.getElementById("inputstring").innerHTML += " " + bottonName;
   // botton something
-  let indx = mixer.indexOf(bottonName);
+  let indx = fishs.indexOf(bottonName);
   if (indx >= 0) {
     if (Botton.state[bottonName]) {
       document.getElementById(Botton.map[bottonName]).checked = false;
-      Botton.state[mixer[indx]] = false;
+      Botton.state[fishs[indx]] = false;
     } else {
-      Botton.state[mixer[indx]] = true;
+      Botton.state[fishs[indx]] = true;
     }
-    for (let i = 0; i < mixer.length; i++) {
+    for (let i = 0; i < fishs.length; i++) {
       if (i != indx) {
-        Botton.state[mixer[i]] = false;
+        Botton.state[fishs[i]] = false;
       }
     }
   }
@@ -1111,7 +1113,10 @@ function handleClick(bottonName) {
     // "#F08080",
     // "#17b794",
     // "#40E0D0"
-    "#f30a49", "#F08080", "#74acf2", "#666666"
+    "#f30a49",
+    "#F08080",
+    "#74acf2",
+    "#666666"
   );
 
   // highlight next state
@@ -1122,12 +1127,12 @@ function handleClick(bottonName) {
     Botton.state["ปลาร้า"] = false;
   }
   if (lfc2.indexOf(next.name) >= 0) {
-    for (let i = 0; i < mixer.length; i++) {
-      document.getElementById(Botton.map[mixer[i]]).checked = false;
-      Botton.state[mixer[i]] = false;
+    for (let i = 0; i < fishs.length; i++) {
+      document.getElementById(Botton.map[fishs[i]]).checked = false;
+      Botton.state[fishs[i]] = false;
     }
   }
-    
+
   if (next.name == "Start_state") {
     document.getElementById("pednoi").checked = false;
     Botton.state["เผ็ดน้อย"] = false;
@@ -1234,7 +1239,7 @@ let Botton = {
     ปลาย่าง: "ปลาย่าง",
     ขนมแมว: "ขนมแมว",
     Confirm: "Confirm",
-    Reset: "Reset",
+    Restart: "Restart",
   },
   state: {
     ข้าว: false,
@@ -1243,7 +1248,7 @@ let Botton = {
     ปลาย่าง: false,
     ขนมแมว: false,
     Confirm: false,
-    Reset: false,
+    Restart: false,
   },
 };
 
@@ -1264,7 +1269,7 @@ let imgmap = {
   น้อนไม่กิน: "13Nope",
 };
 
-let mixer = ["ปูเค็ม", "หมูยอ", "ไข่เค็ม"];
+let fishs = ["ปลาดิบ", "ปลาย่าง"];
 let lfc1 = [
   "Start_state",
   "ข้าว ",
@@ -1285,5 +1290,5 @@ let bottonList = [
   "ปลาย่าง",
   "ขนมแมว",
   "Confirm",
-  "Reset",
+  "Restart",
 ];

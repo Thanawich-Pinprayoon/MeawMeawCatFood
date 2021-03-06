@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
   <script src="lib/go.js?v=1001"></script>
   <script src="state.js?v=1001"></script>
-  <script src="cilGoJs.js?v=1001"></script>
+  <script src="GoJs.js?v=1001"></script>
 </head>
 
 <body>
@@ -66,8 +66,8 @@
 					<br>
 
 					<div class="food">
-						<button class="ButtonRe">Restart</button>
-						<button class="ButtonCon">Confirm</button>
+						<button class="ButtonRe" onclick="restart()">Restart</button>
+						<button class="ButtonCon" onclick="handleClick('Confirm')">Confirm</button>
 					</div>
 
 				</div>
@@ -94,7 +94,7 @@
           <p>หมายเหตุ หลังจากกด Confirm แล้วจะเปลี่ยนเมนูไม่ได้ต้องกดปุ่ม Restart เท่านั้น</p>
           <p>พร้อมแล้วก็กดเริ่มได้เลยเมี๊ยวววว ~~</p>
         </p>
-        <button class="instruction-content-button" id="instructionStartButton">
+        <button class="instruction-content-button" id="instructionStartButton" onclick="init()">
          เริ่ม
         </button>
       </div>
@@ -112,12 +112,12 @@
             </span>
         </div>
         <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
-        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
-        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
-        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
-        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
-        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
-        <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
+        <p>นายชริตา สุรนันทจักร์ 61010216</p>
+        <p>นายญาโณทัย อาปานุติกุล 61010260</p>
+        <p>นางสาวณัฐมน เปี่ยมฉวีวงศ์ 61010351</p>
+        <p>นายณัฐรัตน์ เสรีรัตน์ 61010352</p>
+        <p>นายธนวิชญ์ ปิ่นประยูร 61010456</p>
+        <p>นายสมพล พิมพ์พิศคนึง 61011066</p>
        
       </div>
       <!-- --------------------------/member-content--------------------------- -->
