@@ -106,9 +106,8 @@
 .dfa:hover {
   box-shadow: 0px 5px 5px #e9caf0;
 }
-#myDiagramDiv{
-
-	outline: none;
+#myDiagramDiv {
+  outline: none;
 }
 
 .input-container {
@@ -331,7 +330,7 @@ label img:hover {
 }
 
 .info-popup {
-  display: block;
+  display: none;
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
