@@ -272,6 +272,14 @@ linkDataArray = [
   },
   {
     from: 5,
+    to: 3,
+    text: "ข้าว",
+    points: [460, 90, 560, 90, 560, -230, 475, -230],
+    segmentIndex: 1,
+    segmentFraction: 0.05,
+  },
+  {
+    from: 5,
     to: 5,
     points: [400, 130, 370, 130, 370, 150, 410, 150],
     segmentIndex: 1,
@@ -298,7 +306,7 @@ linkDataArray = [
     from: 5,
     to: 11,
     text: "Confirm",
-    points: [470, 150, 600, 150],
+    points: [480, 130, 530, 130, 530, -210, 820, -210, 820, -120],
     segmentIndex: 0,
     segmentFraction: 0.22,
   },
@@ -311,14 +319,6 @@ linkDataArray = [
     text: "ปลาย่าง",
     segmentIndex: 1,
     segmentFraction: 0.35,
-  },
-  {
-    from: 6,
-    to: 3,
-    text: "ข้าว",
-    points: [460, 90, 560, 90, 560, -230, 475, -230],
-    segmentIndex: 1,
-    segmentFraction: 0.05,
   },
   {
     from: 6,
@@ -438,7 +438,7 @@ linkDataArray = [
   },
   {
     from: 8,
-    to: 112,
+    to: 12,
     text: "Confirm",
     points: [677, -60, 777, -60, 777, 10, 810, 10],
     segmentIndex: 0,
@@ -1052,11 +1052,9 @@ function restart() {
   machine.current_State = { name: "Start_state", key: 0 };
   machine.prev_State = { name: "none", key: -1 };
   highlightNode(machine.current_State.key);
-  for (let i = 0; i < bottonList.length; i++) {
-    document.getElementById(bottonList[i]).checked = false;
-  }
-  resetPathColor();
-  highlightPath(-1, 0, "#f24726", "#F08080", "#17b794", "#40E0D0");
+  resetPathColor(); 
+  console.log("restart")
+  highlightPath(-1, 0, "#f30a49", "#F08080", "#74acf2", "#1e77b7");
   Botton.state = {
     ข้าว: false,
     อาหารเม็ด: false,
@@ -1066,10 +1064,15 @@ function restart() {
     Confirm: false,
     Restart: false,
   };
+
+  for (let i = 0; i < bottonList.length; i++) {
+    document.getElementById(bottonList[i]).checked = false;
+  }
+
 }
 
 function handleClick(bottonName) {
-  console.log(bottonName)
+  console.log(bottonName);
   document.getElementById("inputstring").innerHTML += " " + bottonName;
   // botton something
   // let indx = fishs.indexOf(bottonName);
@@ -1086,7 +1089,7 @@ function handleClick(bottonName) {
   //       Botton.state[fishs[i]] = false;
   //     }
   //   }
-    
+
   // }
 
   machine.input_String.push(bottonName);
@@ -1160,21 +1163,11 @@ function handleClick(bottonName) {
       "image/" + imgmap["Start_state"] + ".png";
   }
 
-  console.log(machine.current_State.name);
-  // saveKaikemPlara();
+  // console.log(machine.current_State.name);
 
-  /*
-  .......##.......##.......##.......##.########....###.....#######.....########.########..####.########.########.########........##.......##.......##.......##.......##.......##
-  ......##.......##.......##.......##.....##......##.##...##.....##....##.......##.....##..##.....##....##.......##.....##......##.......##.......##.......##.......##.......##.
-  .....##.......##.......##.......##......##.....##...##..##.....##....##.......##.....##..##.....##....##.......##.....##.....##.......##.......##.......##.......##.......##..
-  ....##.......##.......##.......##.......##....##.....##.##.....##....######...##.....##..##.....##....######...##.....##....##.......##.......##.......##.......##.......##...
-  ...##.......##.......##.......##........##....#########.##.....##....##.......##.....##..##.....##....##.......##.....##...##.......##.......##.......##.......##.......##....
-  ..##.......##.......##.......##.........##....##.....##.##.....##....##.......##.....##..##.....##....##.......##.....##..##.......##.......##.......##.......##.......##.....
-  .##.......##.......##.......##..........##....##.....##..#######.....########.########..####....##....########.########..##.......##.......##.......##.......##.......##......
-  */
   if (
     bottonName == "Confirm" &&
-    document.getElementById("name").innerHTML != "ตำอะไรเอ่ย" &&
+    // document.getElementById("name").innerHTML != "ตำอะไรเอ่ย" &&
     machine.current_State.name == "Confirm"
   ) {
     let timerInterval;

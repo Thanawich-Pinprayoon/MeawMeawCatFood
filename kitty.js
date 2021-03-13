@@ -41,6 +41,7 @@ function spawnCat() {
     div.className = "cat";
     div.style.width = "65px";
     div.style.left = "0px";
+    div.style.zIndex= 0;
     cat_count += 1;
     return div;
   };

@@ -21,10 +21,10 @@
     </div>
   <div class="container1">
     <div class="topic">
-      <h1 class="logo">Meaw Meaw Cat Food</h1>
       <div id="header-background" class="basic-kitty-mode">
         <script src="kitty.js"></script>
       </div>
+      <h1 class="logo">Meaw Meaw Cat Food</h1>
       <div class="member-button" id="memberButton">
         <span class="material-icons-round noselect" style="font-size:100px;color:#0da789;cursor: pointer;">
           groups
@@ -52,7 +52,7 @@
           <div class="foods">
 
             <div class="food">
-              <input id="btn-1" type="radio" class="Button-pic" onclick="handleClick('อาหารเม็ด')">
+              <input id="btn-1" type="radio" name="main-course" class="Button-pic" onclick="handleClick('อาหารเม็ด')">
               <label for="btn-1">
                 <img class="food-img" src="./src/img/อาหารเม็ด.png" alt="อาหารเม็ด" height="90">
               </label>
@@ -60,7 +60,7 @@
             </div>
 
             <div class="food">
-              <input id="btn-2" type="radio" class="Button-pic" onclick="handleClick('ข้าว')">
+              <input id="btn-2" type="radio" name="main-course" class="Button-pic" onclick="handleClick('ข้าว')">
               <label for="btn-2">
                 <img class="food-img" src="./src/img/ข้าว.png" alt="ข้าว" height="90">
               </label>
@@ -74,7 +74,7 @@
 
           <div class="foods">
             <div class="food">
-              <input id="btn-3" type="radio" class="Button-pic" onclick="handleClick('ปลาย่าง')">
+              <input id="btn-3" type="radio"  name="fish"  class="Button-pic" onclick="handleClick('ปลาย่าง')">
               <label for="btn-3">
                 <img class="food-img" src="./src/img/ปลา1.png" alt="ปลา1" height="90">
               </label>
@@ -82,7 +82,7 @@
             </div>
 
             <div class="food">
-              <input id="btn-4" type="radio" class="Button-pic" onclick="handleClick('ปลาดิบ')">
+              <input id="btn-4" type="radio"  name="fish" class="Button-pic" onclick="handleClick('ปลาดิบ')">
               <label for="btn-4">
                 <img class="food-img" src="./src/img/ปลา2.png" alt="ปลา2" height="90">
               </label>
@@ -94,7 +94,7 @@
           <p class="t">3: Snack</p>
 
           <div class="snack">
-            <input id="btn-5" type="radio" class="Button-pic" onclick="handleClick('ขนมแมว')">
+            <input id="btn-5" type="radio"  name="snack" class="Button-pic" onclick="handleClick('ขนมแมว')">
             <label for="btn-5">
               <img class="food-img" src="./src/img/ขนมแมว.png" alt="ขนมแมว" height="85">
             </label>
