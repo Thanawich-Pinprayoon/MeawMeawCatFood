@@ -1092,6 +1092,7 @@ function handleClick(bottonName) {
 
   // }
 
+
   machine.input_String.push(bottonName);
   console.log(machine.input_String);
 
