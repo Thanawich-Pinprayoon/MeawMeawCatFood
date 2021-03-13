@@ -311,12 +311,15 @@
 
 label img:hover {
   border: #f24726;
-  /* box-shadow: 0 0 10px #f24726; */
   -webkit-filter: drop-shadow(0px 0px 10px #f24726);
   filter: drop-shadow(0px 0px 10px #f24726);
 }
 
-
+input:checked ~ label {
+  /* background-color: #008066; */
+  -webkit-filter: drop-shadow(0px 0px 30px #f24726);
+  -webkit-transition: all 0.3s ease-in-out;
+}
 
 /*----------------------------------*/
 
