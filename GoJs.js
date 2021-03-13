@@ -1052,11 +1052,9 @@ function restart() {
   machine.current_State = { name: "Start_state", key: 0 };
   machine.prev_State = { name: "none", key: -1 };
   highlightNode(machine.current_State.key);
-  for (let i = 0; i < bottonList.length; i++) {
-    document.getElementById(bottonList[i]).checked = false;
-  }
-  resetPathColor();
-  highlightPath(-1, 0, "#f24726", "#F08080", "#17b794", "#40E0D0");
+  resetPathColor(); 
+  console.log("restart")
+  highlightPath(-1, 0, "#f30a49", "#F08080", "#74acf2", "#1e77b7");
   Botton.state = {
     ข้าว: false,
     อาหารเม็ด: false,
@@ -1066,6 +1064,11 @@ function restart() {
     Confirm: false,
     Restart: false,
   };
+
+  for (let i = 0; i < bottonList.length; i++) {
+    document.getElementById(bottonList[i]).checked = false;
+  }
+
 }
 
 function handleClick(bottonName) {
@@ -1174,7 +1177,7 @@ function handleClick(bottonName) {
   */
   if (
     bottonName == "Confirm" &&
-    document.getElementById("name").innerHTML != "ตำอะไรเอ่ย" &&
+    // document.getElementById("name").innerHTML != "ตำอะไรเอ่ย" &&
     machine.current_State.name == "Confirm"
   ) {
     let timerInterval;
