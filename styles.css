@@ -433,6 +433,8 @@ input:checked ~ label {
   top: -1%;
   font-size: 50px;
   color: #0da789;
+  text-shadow: 2px 2px 1px #008066;
+
   /* text-shadow: 0 5px #008066; */
 }
 .member-button:hover {
