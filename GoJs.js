@@ -306,7 +306,7 @@ linkDataArray = [
     from: 5,
     to: 11,
     text: "Confirm",
-    points: [470, 150, 600, 150],
+    points: [480, 130, 530, 130, 530, -210, 820, -210, 820, -120],
     segmentIndex: 0,
     segmentFraction: 0.22,
   },
@@ -438,7 +438,7 @@ linkDataArray = [
   },
   {
     from: 8,
-    to: 112,
+    to: 12,
     text: "Confirm",
     points: [677, -60, 777, -60, 777, 10, 810, 10],
     segmentIndex: 0,
