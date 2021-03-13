@@ -1069,24 +1069,28 @@ function restart() {
 }
 
 function handleClick(bottonName) {
+  console.log(bottonName)
   document.getElementById("inputstring").innerHTML += " " + bottonName;
   // botton something
-  let indx = fishs.indexOf(bottonName);
-  if (indx >= 0) {
-    if (Botton.state[bottonName]) {
-      document.getElementById(Botton.map[bottonName]).checked = false;
-      Botton.state[fishs[indx]] = false;
-    } else {
-      Botton.state[fishs[indx]] = true;
-    }
-    for (let i = 0; i < fishs.length; i++) {
-      if (i != indx) {
-        Botton.state[fishs[i]] = false;
-      }
-    }
-  }
+  // let indx = fishs.indexOf(bottonName);
+  // if (indx >= 0) {
+  //   if (Botton.state[bottonName]) {
+  //     document.getElementById(Botton.map[bottonName]).checked = false;
+  //     Botton.state[fishs[indx]] = false;
+  //     console.log("dfsdfda")
+  //   } else {
+  //     Botton.state[fishs[indx]] = true;
+  //   }
+  //   for (let i = 0; i < fishs.length; i++) {
+  //     if (i != indx) {
+  //       Botton.state[fishs[i]] = false;
+  //     }
+  //   }
+    
+  // }
 
   machine.input_String.push(bottonName);
+  console.log(machine.input_String);
 
   // clear highlight path
 
@@ -1122,23 +1126,23 @@ function handleClick(bottonName) {
   // highlight next state
   highlightNode(next.key);
 
-  if (lfc1.indexOf(next.name) >= 0) {
-    document.getElementById("plara").checked = false;
-    Botton.state["ปลาร้า"] = false;
-  }
-  if (lfc2.indexOf(next.name) >= 0) {
-    for (let i = 0; i < fishs.length; i++) {
-      document.getElementById(Botton.map[fishs[i]]).checked = false;
-      Botton.state[fishs[i]] = false;
-    }
-  }
+  // if (lfc1.indexOf(next.name) >= 0) {
+  //   document.getElementById("ขนมแมว").checked = false;
+  //   Botton.state["ขนมแมว"] = false;
+  // }
+  // if (lfc2.indexOf(next.name) >= 0) {
+  //   for (let i = 0; i < fishs.length; i++) {
+  //     document.getElementById(Botton.map[fishs[i]]).checked = false;
+  //     Botton.state[fishs[i]] = false;
+  //   }
+  // }
 
-  if (next.name == "Start_state") {
-    document.getElementById("pednoi").checked = false;
-    Botton.state["เผ็ดน้อย"] = false;
-    document.getElementById("pedmak").checked = false;
-    Botton.state["เผ็ดมาก"] = false;
-  }
+  // if (next.name == "Start_state") {
+  //   document.getElementById("อาหารเม็ด").checked = false;
+  //   Botton.state["อาหารเม็ด"] = false;
+  //   document.getElementById("ข้าว").checked = false;
+  //   Botton.state["ข้าว"] = false;
+  // }
 
   // set current state = next state
   machine.setCurrentState(next);
@@ -1157,7 +1161,7 @@ function handleClick(bottonName) {
   }
 
   console.log(machine.current_State.name);
-  saveKaikemPlara();
+  // saveKaikemPlara();
 
   /*
   .......##.......##.......##.......##.########....###.....#######.....########.########..####.########.########.########........##.......##.......##.......##.......##.......##
