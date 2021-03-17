@@ -18,7 +18,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 0 0 10px white;
-
 }
 
 #header-background {
@@ -59,7 +58,7 @@
 .instruction-content {
   background-color: #f4f1bc;
   margin: auto;
-  padding-left:50px;
+  padding-left: 50px;
   padding-top: 50px;
   padding-bottom: 40px;
   /*padding: 50px;*/
@@ -218,7 +217,6 @@
   transform: translate3D(0, -5px, 0);
   box-shadow: 0 25px 0 -15px rgb(150, 5, 5);
 }
-
 
 .ButtonRe:active {
   transform: translate3D(0, 5px, 0);
@@ -398,9 +396,10 @@ input:checked ~ label {
   /* Black w/ opacity */
 }
 
-.info-content { /*pop up ใน i*/
+.info-content {
+  /*pop up ใน i*/
   display: flex;
-  background-color:white;
+  background-color: white;
   margin: auto;
   padding: 5px;
   /*border: 1px solid #888;*/
@@ -431,7 +430,8 @@ input:checked ~ label {
   height: 75%;
 }
 
-.info-content-item2-button {  /*ปุ่มกากบาท*/
+.info-content-item2-button {
+  /*ปุ่มกากบาท*/
   position: absolute;
   right: 17%;
   top: 6%;
@@ -457,7 +457,7 @@ input:checked ~ label {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 2;
   /* Sit on top */
   padding-top: 5%;
   /* Location of the box */
@@ -478,11 +478,15 @@ input:checked ~ label {
 
 .result-content {
   display: flex;
-  background-color: #fefefe;
+  background-color: white;
   margin: auto;
   padding: 5px;
-  border: 1px solid #888;
-  width: 80%;
+  /*border: 1px solid #888;*/
+  border: 5px solid #2d9bf0;
+  width: 60%;
+  height: 59%;
+  /*border: 1px solid black;*/
+  border-radius: 25px;
 }
 
 .result-content-button {
@@ -491,15 +495,17 @@ input:checked ~ label {
 }
 
 .result-content-item1 {
-  width: 50%;
+  margin-left: 10%;
+  width: 30%;
   height: 200px;
-  background-color: blue;
+  padding-top: 10%;
 }
 
 .result-content-item2 {
   width: 50%;
   height: 200px;
-  background-color: green;
+  color: #f24726; /*สีตัวอักษร*/
+  padding-top: 20%;
 }
 
 .result-content-item1-image {

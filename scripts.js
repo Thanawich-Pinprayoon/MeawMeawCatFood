@@ -23,6 +23,9 @@ document.addEventListener(
       .getElementById("infoContentItem2Button")
       .addEventListener("click", closeInfoPopup);
     document
+      .getElementById("resultContentItem2Button")
+      .addEventListener("click", closeResultPopup);
+    document
       .getElementById("pelletFood")
       .addEventListener("click", () => showInfoPopup("อาหารเม็ด.png"));
     document
@@ -37,6 +40,7 @@ document.addEventListener(
     document
       .getElementById("snack")
       .addEventListener("click", () => showInfoPopup("ขนมแมว.png"));
+  
   },
   false
 );
@@ -85,4 +89,75 @@ function showInfoPopup(imageName) {
 }
 function closeInfoPopup() {
   document.getElementById("infoPopup").style.display = "none";
+}
+
+function showResultPopup(imageName) {
+  document.getElementById("resultContentItem1Image").src =
+    "./src/img/" + imageName;
+  if (imageName == "ข้าว.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "นี่คือข้าวววว";
+    document.getElementById("resultContentItem1Image").style.width = "320px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }
+  else if (imageName == "อาหารเม็ด.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "นี่คืออาหารเม็ดดดด";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }
+  else if (imageName == "ข้าวหน้าปลาดิบ.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "นี่คือข้าวหน้าปลาดิบ";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }
+  else if (imageName == "ข้าวหน้าปลาย่าง.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "นี่คือข้าวหน้าปลาย่าง";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }
+  else if (imageName == "อาหารเม็ดใส่ปลาดิบ.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "นี่คืออาหารเม็ดใส่ปลาดิบ";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }
+  else if (imageName == "อาหารเม็ดใส่ปลาย่าง.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "นี่คืออาหารเม็ดใส่ปลาย่าง";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }
+  else if (imageName == "ข้าวหน้าปลาดิบ_ขนมแมว.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "นี่คือข้าวหน้าปลาดิบกับขนมแมวนะจ๊ะ";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }
+  else if (imageName == "ข้าวหน้าปลาย่าง_ขนมแมว.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "นี่คือข้าวหน้าปลาย่างกับขนมแมวนะจ๊ะ";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }
+  else if (imageName == "อาหารเม็ดใส่ปลาดิบ_ขนมแมว.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "นี่คืออาหารเม็ดใส่ปลาดิบกับขนมแมวนะจ๊ะ";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }
+  else if (imageName == "อาหารเม็ดใส่ปลาย่าง_ขนมแมว.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "นี่คืออาหารเม็ดใส่ปลาย่างกับขนมแมวนะจ๊ะ";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }
+    
+
+  document.getElementById("resultPopup").style.display = "block";
+}
+function closeResultPopup() {
+  document.getElementById("resultPopup").style.display = "none";
 }
