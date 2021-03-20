@@ -367,13 +367,13 @@ input:checked~label {
 }
 
 .member-content {
-	background-color: #e9caf0;
+	background-color: #caf0d0;
 	margin: auto;
 	padding: 5px;
 	border: 1px solid #888;
 	border-radius: 25px;
 	width: 95%;
-	color: #6c36b7;
+	color: #1f912e;
 	font-size: 20px;
 }
 
@@ -465,7 +465,6 @@ input:checked~label {
 	text-shadow: 5px 5px 2px #008066;
 }
 
-
 .result-popup {
 	display: none;
 	/* Hidden by default */
@@ -488,9 +487,9 @@ input:checked~label {
 	/* Fallback color */
 	background-color: rgba(0, 0, 0, 0.4);
 	/* Black w/ opacity */
-  }
-  
-  .result-content {
+}
+
+.result-content {
 	display: flex;
 	background-color: white;
 	margin: auto;
@@ -501,31 +500,32 @@ input:checked~label {
 	height: 59%;
 	/*border: 1px solid black;*/
 	border-radius: 25px;
-  }
-  
-  .result-content-button {
+}
+
+.result-content-button {
 	position: absolute;
 	right: 10%;
-  }
-  
-  .result-content-item1 {
+}
+
+.result-content-item1 {
 	margin-left: 10%;
 	width: 30%;
 	height: 200px;
 	padding-top: 10%;
-  }
-  
-  .result-content-item2 {
+}
+
+.result-content-item2 {
 	width: 50%;
 	height: 200px;
-	color: #f24726; /*สีตัวอักษร*/
+	color: #f24726;
+	/*สีตัวอักษร*/
 	padding-top: 20%;
-  }
-  
-  .result-content-item1-image {
+}
+
+.result-content-item1-image {
 	width: 50%;
 	height: 75%;
-  }
+}
 
 .noselect {
 	-webkit-touch-callout: none;
