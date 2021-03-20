@@ -1056,58 +1056,23 @@ function handleClick(bottonName) {
 
   machine.setCurrentState(next);
 
-  if (["Confirm", "Trap_state"].indexOf(machine.current_State.name) < 0) {
-    document.getElementById(
-      "name"
-    ).innerHTML = machine.current_State.name.split("_").join("");
-    document.getElementById("imgout").src =
-      "image/" + imgmap[machine.current_State.name] + ".png";
-  }
-  if (machine.current_State.name == "Start_state") {
-    document.getElementById("name").innerHTML = "ตำอะไรเอ่ย";
-    document.getElementById("imgout").src =
-      "image/" + imgmap["Start_state"] + ".png";
-  }
-
-  if (bottonName == "Confirm" && machine.current_State.name == "Confirm") {
-    let timerInterval;
-    Swal.fire({
-      title:
-        "เมนูของคุณ" + " " + document.getElementById("name").innerHTML + "!👍",
-      imageUrl: "image/papaya.svg",
-      imageWidth: 160,
-      imageHeight: 130,
-      imageAlt: "Custom image",
-      timerProgressBar: true,
-      timer: 3000,
-      onBeforeOpen: () => {
-        Swal.showLoading();
-        timerInterval = setInterval(() => {
-          const content = Swal.getContent();
-          if (content) {
-            const b = content.querySelector("b");
-            if (b) {
-              b.textContent = Swal.getTimerLeft();
-            }
-          }
-        }, 100);
-      },
-      onClose: () => {
-        clearInterval(timerInterval);
-      },
-    }).then((result) => {
-      /* Read more about handling dismissals below */
-      if (result.dismiss === Swal.DismissReason.timer) {
-        console.log("I was closed by the timer");
-      }
-    });
+  // console.log("bottonname is now: ", bottonName);
+  btnList = [
+    Botton.state.ขนมแมว,
+    Botton.state.ข้าว,
+    Botton.state.ปลาดิบ,
+    Botton.state.ปลาย่าง,
+    Botton.state.อาหารเม็ด,
+  ];
+  for (let o = 0; o < btnList.length; o++) {
+    // document.getElementById(bottonList[o]).checked = btnList[o];
+    console.log(btnList[o]);
   }
 }
 
 function resetPathColor() {
   for (let i = 0; i < 16; i++) {
     for (let j = 0; j < 16; j++) {
-      // highlightPath(i,j,'#666666','#666666')
       highlightPath(i, j, "#7e7e7e", "#7e7e7e", "#7e7e7e", "##7e7e7e");
       highlightPath(-1, -1, "#f30a49", "#f30a49", "#f30a49", "#f30a49");
     }
