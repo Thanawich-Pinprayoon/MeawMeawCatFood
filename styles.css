@@ -465,12 +465,13 @@ input:checked~label {
 	text-shadow: 5px 5px 2px #008066;
 }
 
+
 .result-popup {
 	display: none;
 	/* Hidden by default */
 	position: fixed;
 	/* Stay in place */
-	z-index: 1;
+	z-index: 2;
 	/* Sit on top */
 	padding-top: 5%;
 	/* Location of the box */
@@ -487,38 +488,44 @@ input:checked~label {
 	/* Fallback color */
 	background-color: rgba(0, 0, 0, 0.4);
 	/* Black w/ opacity */
-}
-
-.result-content {
+  }
+  
+  .result-content {
 	display: flex;
-	background-color: #fefefe;
+	background-color: white;
 	margin: auto;
 	padding: 5px;
-	border: 1px solid #888;
-	width: 80%;
-}
-
-.result-content-button {
+	/*border: 1px solid #888;*/
+	border: 5px solid #2d9bf0;
+	width: 60%;
+	height: 59%;
+	/*border: 1px solid black;*/
+	border-radius: 25px;
+  }
+  
+  .result-content-button {
 	position: absolute;
 	right: 10%;
-}
-
-.result-content-item1 {
+  }
+  
+  .result-content-item1 {
+	margin-left: 10%;
+	width: 30%;
+	height: 200px;
+	padding-top: 10%;
+  }
+  
+  .result-content-item2 {
 	width: 50%;
 	height: 200px;
-	background-color: blue;
-}
-
-.result-content-item2 {
-	width: 50%;
-	height: 200px;
-	background-color: green;
-}
-
-.result-content-item1-image {
+	color: #f24726; /*สีตัวอักษร*/
+	padding-top: 20%;
+  }
+  
+  .result-content-item1-image {
 	width: 50%;
 	height: 75%;
-}
+  }
 
 .noselect {
 	-webkit-touch-callout: none;
