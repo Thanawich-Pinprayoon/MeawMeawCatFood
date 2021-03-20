@@ -209,13 +209,13 @@
   outline: none;
   margin-left: 20px;
   font-size: 16px;
-  box-shadow: 0 20px 0 -15px rgb(150, 5, 5);
+  box-shadow: 0 10px rgb(150, 5, 5);
   cursor: pointer;
 }
 
 .ButtonRe:hover {
   transform: translate3D(0, -5px, 0);
-  box-shadow: 0 25px 0 -15px rgb(150, 5, 5);
+  box-shadow: 0 15px rgb(150, 5, 5);
 }
 
 .ButtonRe:active {
