@@ -690,38 +690,19 @@ linkDataArray = [
   // },
 ];
 
-var $ = go.GraphObject.make; // for conciseness in defining templates
+var $ = go.GraphObject.make;
 
-// How to use
-// call this function with these parameters
-// nodeId : [0,14] id of target node
-// ex. highlightNode(2)
-// *** only 1 node can highlighted ***
-// if want more node to be highlighted, contact previous programmer na ja
 function highlightNode(nodeId) {
   var node = myDiagram.findNodeForKey(nodeId++);
-  // console.log(node);
   if (node !== null) {
-    // make sure the selected node is in the viewport
     myDiagram.scrollToRect(node.actualBounds);
-    // move the large yellow node behind the selected node to highlight it
     highlighter.location = new go.Point(
       node.location.x + 40,
       node.location.y + 40
     );
-    // console.log(node.location)
-    // console.log(highlighter.location)
   }
 }
 
-// How to use
-// call this function with these parameters
-// from : [-1,14] id of "from" node
-// to : [-1,14] id of "to" node
-// colorPath : value of RGB path's color [value also word ex. "#52ce60",'blue']
-// colorText : value of RGB path's textBlock [value also word ex. "#52ce60",'red']
-// ex. highlightPath(0,1,'blue','red')
-// if want smth more , contact CXZ na ja
 function highlightPath(
   from,
   to,
@@ -732,11 +713,9 @@ function highlightPath(
 ) {
   for (p of myDiagram.model.linkDataArray) {
     if (p.from == from && p.to == to) {
-      // console.log(p);
       myDiagram.model.set(p, "colorPath", colorPathf);
       myDiagram.model.set(p, "colorText", colorTextf);
       myDiagram.model.set(p, "bold", true);
-      // break;
     } else if (p.from == to) {
       myDiagram.model.set(p, "colorPath", colorPatht);
       myDiagram.model.set(p, "colorText", colorTextt);
@@ -768,56 +747,39 @@ function _toggleShowPath() {
   }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function init() {
-  myDiagram = $(
-    go.Diagram,
-    "myDiagramDiv", // must name or refer to the DIV HTML element
-    {
-      allowHorizontalScroll: false,
-      allowVerticalScroll: false,
-      // grid: $(go.Panel, "Grid",
-      //   { gridCellSize: new go.Size(10, 10) },
-      //   $(go.Shape, "LineH", { stroke: "lightgray", strokeWidth: 0.5 }),
-      //   $(go.Shape, "LineV", { stroke: "lightgray", strokeWidth: 0.5 })
-      // ),
-      // "draggingTool.isGridSnapEnabled": true,
+  myDiagram = $(go.Diagram, "myDiagramDiv", {
+    allowHorizontalScroll: false,
+    allowVerticalScroll: false,
 
-      "animationManager.initialAnimationStyle": go.AnimationManager.None,
-      InitialAnimationStarting: function (e) {
-        var animation = e.subject.defaultAnimation;
-        animation.easing = go.Animation.EaseOutExpo;
-        animation.duration = 1000;
-        animation.add(e.diagram, "scale", 0.1, 1);
-        animation.add(e.diagram, "opacity", 0, 1);
-      },
+    "animationManager.initialAnimationStyle": go.AnimationManager.None,
+    InitialAnimationStarting: function (e) {
+      var animation = e.subject.defaultAnimation;
+      animation.easing = go.Animation.EaseOutExpo;
+      animation.duration = 1000;
+      animation.add(e.diagram, "scale", 0.1, 1);
+      animation.add(e.diagram, "opacity", 0, 1);
+    },
 
-      // have mouse wheel events zoom in and out instead of scroll up and down
-      "toolManager.mouseWheelBehavior": go.ToolManager.WheelZoom,
-      // enable undo & redo
-      "undoManager.isEnabled": true,
-      positionComputation: function (diagram, pt) {
-        return new go.Point(Math.floor(pt.x), Math.floor(pt.y));
-      },
-      // "ChangedSelection": showLocalOnFullClick
-    }
-  );
+    "toolManager.mouseWheelBehavior": go.ToolManager.WheelZoom,
+    "undoManager.isEnabled": true,
+    positionComputation: function (diagram, pt) {
+      return new go.Point(Math.floor(pt.x), Math.floor(pt.y));
+    },
+  });
 
-  // define the Node template
   myDiagram.nodeTemplate = $(
     go.Node,
     "Auto",
     {
-      // locationSpot: go.Spot.TopCenter,
       isShadowed: true,
       shadowBlur: 1,
       shadowOffset: new go.Point(0, 1),
-      shadowColor: "rgba(0, 0, 0, .14)", //color of shadow
+      shadowColor: "rgba(0, 0, 0, .14)",
     },
     new go.Binding("location", "loc", go.Point.parse).makeTwoWay(
       go.Point.stringify
     ),
-    // define the node's outer shape, which will surround the TextBlock
     $(
       go.Shape,
       "RoundedRectangle",
@@ -827,7 +789,7 @@ function init() {
         fill: null,
         strokeWidth: 0,
         stroke: null,
-        portId: "", // this Shape is the Node's port, not the whole Node
+        portId: "",
         fromLinkable: true,
         fromLinkableSelfNode: true,
         fromLinkableDuplicates: true,
@@ -891,7 +853,7 @@ function init() {
         go.Point.stringify
       ),
       $(go.Shape, "Circle", {
-        fill: "#f67676" /* green */,
+        fill: "#f67676",
         stroke: null,
         portId: "",
         fromLinkable: true,
@@ -900,7 +862,6 @@ function init() {
         toLinkable: true,
         toLinkableSelfNode: true,
         toLinkableDuplicates: true,
-        // cursor: "pointer",
       }),
       $(
         go.TextBlock,
@@ -955,7 +916,7 @@ function init() {
   );
 
   myDiagram.linkTemplate = $(
-    go.Link, // the whole link panel
+    go.Link,
     {
       relinkableFrom: true,
       relinkableTo: true,
@@ -973,7 +934,7 @@ function init() {
     new go.Binding("opacity").makeTwoWay(),
     new go.Binding("points").makeTwoWay(),
     $(
-      go.Shape, // the link path shape
+      go.Shape,
       { isPanelMain: true, strokeWidth: 1 },
       new go.Binding("stroke", "colorPath", function (progress) {
         return progress;
@@ -984,7 +945,7 @@ function init() {
     ),
 
     $(
-      go.Shape, // the arrowhead
+      go.Shape,
       { toArrow: "Standard", stroke: null },
       new go.Binding("fill", "colorPath", function (progress) {
         return progress;
@@ -995,15 +956,13 @@ function init() {
     ),
     $(
       go.TextBlock,
-      "transition", // the label text
+      "transition",
       {
         textAlign: "center",
         font: "bold 9.9pt Bai Jamjuree, arial, sans-serif",
-        // font: "15pt helvetica, arial, sans-serif",
         margin: 4,
         segmentIndex: 0,
         segmentFraction: 0.2,
-        // background: "#ffffff",
       },
       new go.Binding("text").makeTwoWay(),
       new go.Binding("segmentIndex").makeTwoWay(),
@@ -1014,7 +973,6 @@ function init() {
     )
   );
 
-  // Create a part in the background of the full diagram to highlight the selected node
   highlighter = $(
     go.Part,
     "Auto",
@@ -1028,7 +986,7 @@ function init() {
       fill: $(go.Brush, "Radial", {
         0.5: "#dd9ded",
         1.0: "rgba(250,250, 250, 0)",
-      }), // shadow highlight
+      }),
       stroke: null,
       desiredSize: new go.Size(150, 150),
     })
@@ -1036,7 +994,6 @@ function init() {
   myDiagram.add(highlighter);
 
   myDiagram.model = new go.GraphLinksModel(nodeDataArray, linkDataArray);
-  // myDiagram.model.isReadOnly = true;
   myDiagram.isReadOnly = true;
 
   highlightNode(machine.current_State.key);
@@ -1044,16 +1001,13 @@ function init() {
   highlightPath(-1, 0, "#f30a49", "#F08080", "#74acf2", "#1e77b7");
 }
 
-////////////////////////////////////////////////////////////////////////////
-///////////////////// frame edit ////////////////////////////////
-
 function restart() {
   document.getElementById("inputstring").innerHTML = "";
   machine.current_State = { name: "Start_state", key: 0 };
   machine.prev_State = { name: "none", key: -1 };
   highlightNode(machine.current_State.key);
-  resetPathColor(); 
-  console.log("restart")
+  resetPathColor();
+  console.log("restart");
   highlightPath(-1, 0, "#f30a49", "#F08080", "#74acf2", "#1e77b7");
   Botton.state = {
     ข้าว: false,
@@ -1068,35 +1022,14 @@ function restart() {
   for (let i = 0; i < bottonList.length; i++) {
     document.getElementById(bottonList[i]).checked = false;
   }
-
 }
 
 function handleClick(bottonName) {
   console.log(bottonName);
   document.getElementById("inputstring").innerHTML += " " + bottonName;
-  // botton something
-  // let indx = fishs.indexOf(bottonName);
-  // if (indx >= 0) {
-  //   if (Botton.state[bottonName]) {
-  //     document.getElementById(Botton.map[bottonName]).checked = false;
-  //     Botton.state[fishs[indx]] = false;
-  //     console.log("dfsdfda")
-  //   } else {
-  //     Botton.state[fishs[indx]] = true;
-  //   }
-  //   for (let i = 0; i < fishs.length; i++) {
-  //     if (i != indx) {
-  //       Botton.state[fishs[i]] = false;
-  //     }
-  //   }
-
-  // }
-
 
   machine.input_String.push(bottonName);
   console.log(machine.input_String);
-
-  // clear highlight path
 
   highlightPath(
     machine.prev_State.key,
@@ -1106,49 +1039,21 @@ function handleClick(bottonName) {
     "#9C9C9C",
     "#828282"
   );
-
-  //set prev state
   machine.prev_State = machine.current_State;
 
-  // get next state
   let next = machine.getNext(bottonName);
 
-  // highlight path from current state to next state
   highlightPath(
     machine.current_State.key,
     next.key,
-    // "#f30a49",
-    // "#F08080",
-    // "#17b794",
-    // "#40E0D0"
     "#f30a49",
     "#F08080",
     "#74acf2",
     "#666666"
   );
 
-  // highlight next state
   highlightNode(next.key);
 
-  // if (lfc1.indexOf(next.name) >= 0) {
-  //   document.getElementById("ขนมแมว").checked = false;
-  //   Botton.state["ขนมแมว"] = false;
-  // }
-  // if (lfc2.indexOf(next.name) >= 0) {
-  //   for (let i = 0; i < fishs.length; i++) {
-  //     document.getElementById(Botton.map[fishs[i]]).checked = false;
-  //     Botton.state[fishs[i]] = false;
-  //   }
-  // }
-
-  // if (next.name == "Start_state") {
-  //   document.getElementById("อาหารเม็ด").checked = false;
-  //   Botton.state["อาหารเม็ด"] = false;
-  //   document.getElementById("ข้าว").checked = false;
-  //   Botton.state["ข้าว"] = false;
-  // }
-
-  // set current state = next state
   machine.setCurrentState(next);
 
   if (["Confirm", "Trap_state"].indexOf(machine.current_State.name) < 0) {
@@ -1164,13 +1069,7 @@ function handleClick(bottonName) {
       "image/" + imgmap["Start_state"] + ".png";
   }
 
-  // console.log(machine.current_State.name);
-
-  if (
-    bottonName == "Confirm" &&
-    // document.getElementById("name").innerHTML != "ตำอะไรเอ่ย" &&
-    machine.current_State.name == "Confirm"
-  ) {
+  if (bottonName == "Confirm" && machine.current_State.name == "Confirm") {
     let timerInterval;
     Swal.fire({
       title:
@@ -1211,20 +1110,6 @@ function resetPathColor() {
       // highlightPath(i,j,'#666666','#666666')
       highlightPath(i, j, "#7e7e7e", "#7e7e7e", "#7e7e7e", "##7e7e7e");
       highlightPath(-1, -1, "#f30a49", "#f30a49", "#f30a49", "#f30a49");
-    }
-  }
-}
-
-function saveKaikemPlara() {
-  if (machine.current_State.name.indexOf("ไข่") < 0) {
-    document.getElementById("kaikem").checked = false;
-    Botton.state["ไข่เค็ม"] = false;
-    if (machine.current_State.name.indexOf("ปู") >= 0) {
-      document.getElementById("pukem").checked = true;
-      Botton.state["ปูเค็ม"] = true;
-    } else if (machine.current_State.name.indexOf("หมู") >= 0) {
-      document.getElementById("muyoo").checked = true;
-      Botton.state["หมูยอ"] = true;
     }
   }
 }
@@ -1281,12 +1166,4 @@ let lfc1 = [
 let lfc2 = ["Start_state", "ข้าว", "อาหารเม็ด"]; // same
 let lfc3 = [];
 
-let bottonList = [
-  "ข้าว",
-  "อาหารเม็ด",
-  "ปลาดิบ",
-  "ปลาย่าง",
-  "ขนมแมว",
-  "Confirm",
-  "Restart",
-];
+let bottonList = ["btn-1", "btn-2", "btn-3", "btn-4", "btn-5"];
