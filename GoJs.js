@@ -1009,15 +1009,6 @@ function restart() {
   resetPathColor();
   console.log("restart");
   highlightPath(-1, 0, "#f30a49", "#F08080", "#74acf2", "#1e77b7");
-  Botton.state = {
-    ข้าว: false,
-    อาหารเม็ด: false,
-    ปลาดิบ: false,
-    ปลาย่าง: false,
-    ขนมแมว: false,
-    Confirm: false,
-    Restart: false,
-  };
 
   for (let i = 0; i < bottonList.length; i++) {
     document.getElementById(bottonList[i]).checked = false;
@@ -1056,17 +1047,15 @@ function handleClick(bottonName) {
 
   machine.setCurrentState(next);
 
+  compoList = machine.current_State.component;
+  console.log("compoList: ", compoList);
+
   // console.log("bottonname is now: ", bottonName);
-  btnList = [
-    Botton.state.ขนมแมว,
-    Botton.state.ข้าว,
-    Botton.state.ปลาดิบ,
-    Botton.state.ปลาย่าง,
-    Botton.state.อาหารเม็ด,
-  ];
-  for (let o = 0; o < btnList.length; o++) {
-    // document.getElementById(bottonList[o]).checked = btnList[o];
-    console.log(btnList[o]);
+  for (let i = 0; i < bottonList.length; i++) {
+    document.getElementById(bottonList[i]).checked = false;
+  }
+  for (let o = 0; o < compoList.length; o++) {
+    document.getElementById(Botton[compoList[o]]).checked = true;
   }
 }
 
@@ -1080,55 +1069,42 @@ function resetPathColor() {
 }
 
 let Botton = {
-  map: {
-    ข้าว: "ข้าว",
-    อาหารเม็ด: "อาหารเม็ด",
-    ปลาดิบ: "ปลาดิบ",
-    ปลาย่าง: "ปลาย่าง",
-    ขนมแมว: "ขนมแมว",
-    Confirm: "Confirm",
-    Restart: "Restart",
-  },
-  state: {
-    ข้าว: false,
-    อาหารเม็ด: false,
-    ปลาดิบ: false,
-    ปลาย่าง: false,
-    ขนมแมว: false,
-    Confirm: false,
-    Restart: false,
-  },
+  อาหารเม็ด: "btn-1",
+  ข้าว: "btn-2",
+  ปลาย่าง: "btn-3",
+  ปลาดิบ: "btn-4",
+  ขนมแมว: "btn-5",
 };
 
-let imgmap = {
-  Start_state: "xxx",
-  ข้าว: "1rice",
-  อาหารเม็ด: "2med",
-  ข้าวหน้าปลาดิบ: "3sashimiRice",
-  ข้าวหน้าปลาย่าง: "4grillFishRice",
-  อาหารเม็ดใส่ปลาดิบ: "5sashimiMed",
-  อาหารเม็ดใส่ปลาย่าง: "6grillFishMed",
-  ข้าวหน้าปลาดิบ_ขนมแมว: "7sashimiRice-S",
-  ข้าวหน้าปลาย่าง_ขนมแมว: "8grillFishRice-S",
-  อาหารเม็ดใส่ปลาดิบ_ขนมแมว: "9sashimiMed-S",
-  อาหารเม็ดใส่ปลาย่าง_ขนมแมว: "10grillFishMed-S",
-  น้อนอ้วก: "11:Yucky",
-  น้อนถูกใจสิ่งนี้: "12Like",
-  น้อนไม่กิน: "13Nope",
-};
+// let imgmap = {
+//   Start_state: "xxx",
+//   ข้าว: "1rice",
+//   อาหารเม็ด: "2med",
+//   ข้าวหน้าปลาดิบ: "3sashimiRice",
+//   ข้าวหน้าปลาย่าง: "4grillFishRice",
+//   อาหารเม็ดใส่ปลาดิบ: "5sashimiMed",
+//   อาหารเม็ดใส่ปลาย่าง: "6grillFishMed",
+//   ข้าวหน้าปลาดิบ_ขนมแมว: "7sashimiRice-S",
+//   ข้าวหน้าปลาย่าง_ขนมแมว: "8grillFishRice-S",
+//   อาหารเม็ดใส่ปลาดิบ_ขนมแมว: "9sashimiMed-S",
+//   อาหารเม็ดใส่ปลาย่าง_ขนมแมว: "10grillFishMed-S",
+//   น้อนอ้วก: "11:Yucky",
+//   น้อนถูกใจสิ่งนี้: "12Like",
+//   น้อนไม่กิน: "13Nope",
+// };
 
-let fishs = ["ปลาดิบ", "ปลาย่าง"];
-let lfc1 = [
-  "Start_state",
-  "ข้าว ",
-  "อาหารเม็ด",
-  "ข้าวหน้าปลาดิบ",
-  "ข้าวหน้าปลาย่าง",
-  "อาหารเม็ดใส่ปลาดิบ",
-  "อาหารเม็ดใส่ปลาย่าง",
-]; // listForClearActiveBotton
+// let fishs = ["ปลาดิบ", "ปลาย่าง"];
+// let lfc1 = [
+//   "Start_state",
+//   "ข้าว ",
+//   "อาหารเม็ด",
+//   "ข้าวหน้าปลาดิบ",
+//   "ข้าวหน้าปลาย่าง",
+//   "อาหารเม็ดใส่ปลาดิบ",
+//   "อาหารเม็ดใส่ปลาย่าง",
+// ]; // listForClearActiveBotton
 
-let lfc2 = ["Start_state", "ข้าว", "อาหารเม็ด"]; // same
-let lfc3 = [];
+// let lfc2 = ["Start_state", "ข้าว", "อาหารเม็ด"]; // same
+// let lfc3 = [];
 
 let bottonList = ["btn-1", "btn-2", "btn-3", "btn-4", "btn-5"];

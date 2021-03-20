@@ -20,6 +20,7 @@ let machine = {
       ขนมแมว: "Start_state",
       Restart: "Start_state",
       key: 0,
+      component: [],
     },
     ข้าว: {
       //
@@ -32,6 +33,7 @@ let machine = {
       Confirm: "น้อนไม่กิน",
       Restart: "Start_state",
       key: 1,
+      component: ["ข้าว"],
     },
     อาหารเม็ด: {
       //
@@ -44,6 +46,7 @@ let machine = {
       Confirm: "น้อนถูกใจสิ่งนี้",
       Restart: "Start_state",
       key: 2,
+      component: ["อาหารเม็ด"],
     },
     ข้าวหน้าปลาดิบ: {
       //
@@ -56,6 +59,7 @@ let machine = {
       Confirm: "น้อนอ้วก",
       Restart: "Start_state",
       key: 3,
+      component: ["ข้าว", "ปลาดิบ"],
     },
     ข้าวหน้าปลาย่าง: {
       name: "ข้าวหน้าปลาย่าง",
@@ -67,6 +71,7 @@ let machine = {
       Confirm: "น้อนถูกใจสิ่งนี้",
       Restart: "Start_state",
       key: 4,
+      component: ["ข้าว", "ปลาย่าง"],
     },
     อาหารเม็ดใส่ปลาดิบ: {
       name: "อาหารเม็ดใส่ปลาดิบ",
@@ -78,6 +83,7 @@ let machine = {
       Confirm: "น้อนอ้วก",
       Restart: "Start_state",
       key: 5,
+      component: ["อาหารเม็ด", "ปลาดิบ"],
     },
     อาหารเม็ดใส่ปลาย่าง: {
       name: "อาหารเม็ดใส่ปลาย่าง",
@@ -89,6 +95,7 @@ let machine = {
       Confirm: "น้อนถูกใจสิ่งนี้",
       Restart: "Start_state",
       key: 6,
+      component: ["อาหารเม็ด", "ปลาย่าง"],
     },
     ข้าวหน้าปลาดิบ_ขนมแมว: {
       name: "ข้าวหน้าปลาดิบ_ขนมแมว",
@@ -100,6 +107,7 @@ let machine = {
       Confirm: "น้อนอ้วก",
       Restart: "Start_state",
       key: 7,
+      component: ["ข้าว", "ปลาดิบ", "ขนมแมว"],
     },
     ข้าวหน้าปลาย่าง_ขนมแมว: {
       name: "ข้าวหน้าปลาย่าง_ขนมแมว",
@@ -111,6 +119,7 @@ let machine = {
       Confirm: "น้อนถูกใจสิ่งนี้",
       Restart: "Start_state",
       key: 8,
+      component: ["ข้าว", "ปลาย่าง", "ขนมแมว"],
     },
     อาหารเม็ดใส่ปลาดิบ_ขนมแมว: {
       name: "อาหารเม็ดใส่ปลาดิบ_ขนมแมว",
@@ -122,6 +131,7 @@ let machine = {
       Confirm: "น้อนอ้วก",
       Restart: "Start_state",
       key: 9,
+      component: ["อาหารเม็ด", "ปลาดิบ", "ขนมแมว"],
     },
     อาหารเม็ดใส่ปลาย่าง_ขนมแมว: {
       name: "อาหารเม็ดใส่ปลาย่าง_ขนมแมว",
@@ -133,6 +143,7 @@ let machine = {
       Confirm: "น้อนถูกใจสิ่งนี้",
       Restart: "Start_state",
       key: 10,
+      component: ["อาหารเม็ด", "ปลาย่าง", "ขนมแมว"],
     },
     น้อนอ้วก: {
       name: "น้อนอ้วก",
@@ -144,6 +155,7 @@ let machine = {
       Confirm: "Trap_state",
       Restart: "Start_state",
       key: 11,
+      component: [],
     },
     น้อนถูกใจสิ่งนี้: {
       name: "น้อนถูกใจสิ่งนี้",
@@ -155,6 +167,7 @@ let machine = {
       Confirm: "Trap_state",
       Restart: "Start_state",
       key: 12,
+      component: [],
     },
     น้อนไม่กิน: {
       name: "น้อนไม่กิน",
@@ -166,6 +179,7 @@ let machine = {
       Confirm: "Trap_state",
       Restart: "Start_state",
       key: 13,
+      component: [],
     },
     Trap_state: {
       name: "Trap_state",
@@ -177,11 +191,16 @@ let machine = {
       Confirm: "Trap_state",
       Restart: "Start_state",
       key: 14,
+      component: [],
     },
   },
   getNext: function (taget) {
     let next = this.StateMetrix[this.current_State.name][taget];
-    return { name: next, key: this.StateMetrix[next].key };
+    return {
+      name: next,
+      key: this.StateMetrix[next].key,
+      component: this.StateMetrix[next].component,
+    };
   },
   setCurrentState: function (next) {
     this.current_State = next;
