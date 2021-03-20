@@ -4,12 +4,12 @@ document.addEventListener(
   "DOMContentLoaded",
   function () {
     console.log("Dom Loaded");
-    
-    setTimeout(()=>{
+
+    setTimeout(() => {
       splash.classList.add('display-none');
       whitescreen.classList.add('display-none');
     }, 3000);
-    
+
     document
       .getElementById("instructionStartButton")
       .addEventListener("click", instructionStartButtonClickHandler);
@@ -40,7 +40,7 @@ document.addEventListener(
     document
       .getElementById("snack")
       .addEventListener("click", () => showInfoPopup("ขนมแมว.png"));
-  
+
   },
   false
 );
@@ -153,8 +153,18 @@ function showResultPopup(imageName) {
       "นี่คืออาหารเม็ดใส่ปลาย่างกับขนมแมวนะจ๊ะ";
     document.getElementById("resultContentItem1Image").style.width = "300px";
     document.getElementById("resultContentItem1Image").style.height = "300px";
+  } else if (imageName == "Trap_state.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "กรุณากดปุ่ม Restart";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
+  }else if (imageName == "Start_state.png") {
+    document.getElementById("result-content-item2-text").innerHTML =
+      "กรุณาเลือกเมนูอาหาร";
+    document.getElementById("resultContentItem1Image").style.width = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px";
   }
-    
+
 
   document.getElementById("resultPopup").style.display = "block";
 }
