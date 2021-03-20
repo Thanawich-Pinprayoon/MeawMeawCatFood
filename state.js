@@ -196,11 +196,22 @@ let machine = {
   },
   getNext: function (taget) {
     let next = this.StateMetrix[this.current_State.name][taget];
-    return {
-      name: next,
-      key: this.StateMetrix[next].key,
-      component: this.StateMetrix[next].component,
-    };
+    let name = next;
+    let key = this.StateMetrix[next].key;
+    if (key > 10) {
+      return {
+        name,
+        key,
+        component: this.current_State.component,
+      };
+    } else if (key > -1) {
+      return {
+        name,
+        key,
+        component: this.StateMetrix[next].component,
+      };
+    }
+    // let component = this.StateMetrix[next].component;
   },
   setCurrentState: function (next) {
     this.current_State = next;
