@@ -157,12 +157,14 @@ function showResultPopup(imageName) {
     document.getElementById("result-content-item2-text").innerHTML =
       "กรุณากดปุ่ม Restart";
     document.getElementById("resultContentItem1Image").style.width = "300px";
-    document.getElementById("resultContentItem1Image").style.height = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px"
+    document.getElementById("result-btn").style.display="none";
   } else if (imageName == "Start_state.png") {
     document.getElementById("result-content-item2-text").innerHTML =
       "กรุณาเลือกเมนูอาหาร";
     document.getElementById("resultContentItem1Image").style.width = "300px";
-    document.getElementById("resultContentItem1Image").style.height = "300px";
+    document.getElementById("resultContentItem1Image").style.height = "300px"
+    document.getElementById("result-btn").style.display="none";
   } else if (imageName == "น้อนถูกใจสิ่งนี้.png") {
     document.getElementById("result-content-item2-text").innerHTML =
       "";
