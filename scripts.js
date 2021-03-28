@@ -1,5 +1,8 @@
 const splash = document.querySelector('.splash');
 const whitescreen = document.querySelector('.whitescreen');
+
+let isClickNext=false;
+
 document.addEventListener(
   "DOMContentLoaded",
   function () {
@@ -92,8 +95,13 @@ function closeInfoPopup() {
 }
 
 function showResultPopup(imageName) {
+  if(isClickNext){
+    //fix double confirm bug
+    imageName="Trap_state.png";
+    isClickNext=!isClickNext;
+  }
   document.getElementById("resultContentItem1Image").src =
-    "./src/img/" + imageName;
+    "./src/img/" + imageName; 
   if (imageName == "ข้าว.png") {
     document.getElementById("result-content-item2-text").innerHTML =
       "นี่คือข้าวววว";
@@ -173,7 +181,8 @@ function showResultPopup(imageName) {
     document.getElementById("resultContentItem1Image").style.marginTop = "-80px";
     document.getElementById("resultContentItem1Image").style.marginLeft = "50px";
     document.getElementById("result-btn").style.display="none";
-   
+    isClickNext = true;
+    
   } else if (imageName == "น้อนไม่กิน.png") {
     document.getElementById("result-content-item2-text").innerHTML =
       "";
@@ -182,7 +191,8 @@ function showResultPopup(imageName) {
     document.getElementById("resultContentItem1Image").style.marginTop = "-80px";
     document.getElementById("resultContentItem1Image").style.marginLeft = "50px";
     document.getElementById("result-btn").style.display="none";
-
+    isClickNext = true;
+    
   } else if (imageName == "น้อนอ้วก.png") {
     document.getElementById("result-content-item2-text").innerHTML =
       "";
@@ -191,6 +201,8 @@ function showResultPopup(imageName) {
     document.getElementById("resultContentItem1Image").style.marginTop = "-80px";
     document.getElementById("resultContentItem1Image").style.marginLeft = "50px";
     document.getElementById("result-btn").style.display="none";
+    isClickNext = true;
+    
   }
 
   document.getElementById("resultPopup").style.display = "block";

@@ -380,7 +380,9 @@ input:checked ~ label {
   position: absolute;
   top: 6%;
   left: 85%;
-  text-shadow: 0 4px rgb(150, 5, 5);
+  text-shadow: 0 4px #ce2d12;
+  
+
 }
 
 .info-popup {
