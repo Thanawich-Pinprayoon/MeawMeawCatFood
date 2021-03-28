@@ -569,7 +569,7 @@ input:checked ~ label {
   width: 50%;
   height: 200px;
   color: #2d9bf0; /*สีตัวอักษร*/
-  padding-top: 10%;
+  padding-top: 15%;
 }
 
 .result-content-item1-image {
