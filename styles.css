@@ -441,7 +441,7 @@ input:checked ~ label {
   height: 200px;
   color: #2d9bf0;
   /*สีตัวอักษร*/
-  margin: auto 0;
+  padding-top: 15%;
 }
 
 .info-content-item1-image {
@@ -568,8 +568,8 @@ input:checked ~ label {
 .result-content-item2 {
   width: 50%;
   height: 200px;
-  color: #f24726; /*สีตัวอักษร*/
-  padding-top: 20%;
+  color: #2d9bf0; /*สีตัวอักษร*/
+  padding-top: 10%;
 }
 
 .result-content-item1-image {
