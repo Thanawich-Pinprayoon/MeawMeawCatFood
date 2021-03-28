@@ -439,9 +439,9 @@ input:checked ~ label {
   /*background-color: wheat;*/
   width: 50%;
   height: 200px;
-  color: #f24726;
+  color: #2d9bf0;
   /*สีตัวอักษร*/
-  padding-top: 20%;
+  margin: auto 0;
 }
 
 .info-content-item1-image {

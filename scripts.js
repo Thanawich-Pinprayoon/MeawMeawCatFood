@@ -11,7 +11,7 @@ document.addEventListener(
     setTimeout(() => {
       splash.classList.add('display-none');
       whitescreen.classList.add('display-none');
-    }, 3000);
+    }, 2000);
 
     document
       .getElementById("instructionStartButton")
@@ -71,27 +71,27 @@ function showInfoPopup(imageName) {
     "./src/img/" + imageName;
   if (imageName == "ข้าว.png") {
     document.getElementById("info-content-item2-text").innerHTML =
-      "นี่คือข้าวสวยร้อน ๆ";
+      "ข้าวสวยร้อน ๆ ที่อุดมไปด้วยคาร์โบไฮเดรต ที่ช่วยในการสร้างพลังงานให้กับน้อนแมว อย่างไรก็ตาม รสชาติของข้าวอาจจะจืดไปสักหน่อย แนะนำให้รับประทานคู่กับอาหารอื่น ๆ ";
     document.getElementById("infoContentItem1Image").style.width = "320px";
     document.getElementById("infoContentItem1Image").style.height = "300px";
   } else if (imageName == "ขนมแมว.png") {
     document.getElementById("info-content-item2-text").innerHTML =
-      "นี่คือขนมแมวยังไงล่ะ";
+      "ขนมแมว เป็นขนมที่ออกแบบมาเพื่อให้น้อนแมวได้เพลิดเพลินไปกับของว่างหลังอาหาร ด้วยรสชาติที่แสนอร่อย";
     document.getElementById("infoContentItem1Image").style.width = "150px";
     document.getElementById("infoContentItem1Image").style.height = "300px";
   } else if (imageName == "ปลา1.png") {
     document.getElementById("info-content-item2-text").innerHTML =
-      "นี่คือปลาย่างยังไงล่ะ";
+      "ปลาคุณภาพสูง นำมาผ่านกรรมวิธีการย่างอย่างพิถีพิถัน จนได้รสชาติที่อร่อย และกลิ่นหอมอันแสนเย้ายวน เป็นที่ชื่นชอบของน้อนแมว";
     document.getElementById("infoContentItem1Image").style.width = "350px";
     document.getElementById("infoContentItem1Image").style.height = "300px";
   } else if (imageName == "ปลา2.png") {
     document.getElementById("info-content-item2-text").innerHTML =
-      "นี่คือปลาแซลมอนยังไงล่ะ";
+      "ปลาดิบที่เป็นที่ชื่นชอบของเหล่าทาส แต่เอนไซม์ในปลาดิบนั้นสามารถทำลายวิตามิน B1 ได้ซึ่งจำเป็นสำหรับน้อนแมว การขาดวิตามินบีอาจทำให้เกิดปัญหาทางระบบประสาทและนำไปสู่​​อาการชักและอาการโคม่า ควรปรุงให้สุกก่อนนะ";
     document.getElementById("infoContentItem1Image").style.width = "300px";
     document.getElementById("infoContentItem1Image").style.height = "300px";
   } else if (imageName == "อาหารเม็ด.png") {
     document.getElementById("info-content-item2-text").innerHTML =
-      "นี่คืออาหารเม็ดสำหรับน้อนแมววว";
+      "อาหารเม็ด เป็นอาหารสำเร็จรูปที่ถูกผลิตขึ้นเพื่อน้อนแมวโดยเฉพาะ อุดมไปด้วยสารอาหารที่ครบถ้วน รสชาติถูกปาก จะรับประทานอย่างเดียว หรือ คู่กับอย่างอื่นก็ได้นะ";
     document.getElementById("infoContentItem1Image").style.width = "300px";
     document.getElementById("infoContentItem1Image").style.height = "300px";
   }
@@ -106,7 +106,7 @@ function showResultPopup(imageName) {
   if (isClickNext) {
     //fix double confirm bug
     imageName = "Trap_state.png";
-    isClickNext = !isClickNext;
+    isClickNext = false;
   }
   document.getElementById("resultContentItem1Image").src =
     "./src/img/" + imageName;
