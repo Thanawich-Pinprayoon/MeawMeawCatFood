@@ -378,10 +378,15 @@ input:checked ~ label {
 
 .member-content-button {
   position: absolute;
-  top: 6%;
-  left: 85%;
-  text-shadow: 0 4px #ce2d12;
-  
+  top: 7%;
+  right: 0;
+}
+.member-content-button:hover {
+  position: absolute;
+  top: 7%;
+  right: 0;
+  text-shadow: 0 3px #ff4343;
+  transform: translate3D(0,0,5px);
 
 }
 
@@ -447,9 +452,16 @@ input:checked ~ label {
 .info-content-item2-button {
   /*ปุ่มกากบาท*/
   position: absolute;
-  right: 17%;
-  top: 6%;
-  text-shadow: 0 4px rgb(150, 5, 5);
+  top: 10%;
+  right: 20%;
+}
+.info-content-item2-button:hover{
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  text-shadow: 0 3px #ff4343;
+  transform: translate3D(0,0,5px);
+
 }
 
 .member-button {

@@ -1,7 +1,7 @@
 const splash = document.querySelector('.splash');
 const whitescreen = document.querySelector('.whitescreen');
 
-let isClickNext=false;
+let isClickNext = false;
 
 document.addEventListener(
   "DOMContentLoaded",
@@ -43,10 +43,18 @@ document.addEventListener(
     document
       .getElementById("snack")
       .addEventListener("click", () => showInfoPopup("ขนมแมว.png"));
+    document
+      .getElementById("restart-btn")
+      .addEventListener("click", resetClickNext());
 
   },
   false
 );
+
+function resetClickNext(){
+  isClickNext=false;
+  console.log("test");
+}
 
 function instructionStartButtonClickHandler() {
   document.getElementById("instructionPopup").style.display = "none";
@@ -95,13 +103,13 @@ function closeInfoPopup() {
 }
 
 function showResultPopup(imageName) {
-  if(isClickNext){
+  if (isClickNext) {
     //fix double confirm bug
-    imageName="Trap_state.png";
-    isClickNext=!isClickNext;
+    imageName = "Trap_state.png";
+    isClickNext = !isClickNext;
   }
   document.getElementById("resultContentItem1Image").src =
-    "./src/img/" + imageName; 
+    "./src/img/" + imageName;
   if (imageName == "ข้าว.png") {
     document.getElementById("result-content-item2-text").innerHTML =
       "นี่คือข้าวววว";
@@ -166,13 +174,13 @@ function showResultPopup(imageName) {
       "กรุณากดปุ่ม Restart";
     document.getElementById("resultContentItem1Image").style.width = "300px";
     document.getElementById("resultContentItem1Image").style.height = "300px"
-    document.getElementById("result-btn").style.display="none";
+    document.getElementById("result-btn").style.display = "none";
   } else if (imageName == "Start_state.png") {
     document.getElementById("result-content-item2-text").innerHTML =
       "กรุณาเลือกเมนูอาหาร";
     document.getElementById("resultContentItem1Image").style.width = "300px";
     document.getElementById("resultContentItem1Image").style.height = "300px"
-    document.getElementById("result-btn").style.display="none";
+    document.getElementById("result-btn").style.display = "none";
   } else if (imageName == "น้อนถูกใจสิ่งนี้.png") {
     document.getElementById("result-content-item2-text").innerHTML =
       "";
@@ -180,9 +188,9 @@ function showResultPopup(imageName) {
     document.getElementById("resultContentItem1Image").style.height = "450px";
     document.getElementById("resultContentItem1Image").style.marginTop = "-80px";
     document.getElementById("resultContentItem1Image").style.marginLeft = "50px";
-    document.getElementById("result-btn").style.display="none";
+    document.getElementById("result-btn").style.display = "none";
     isClickNext = true;
-    
+
   } else if (imageName == "น้อนไม่กิน.png") {
     document.getElementById("result-content-item2-text").innerHTML =
       "";
@@ -190,9 +198,9 @@ function showResultPopup(imageName) {
     document.getElementById("resultContentItem1Image").style.height = "450px";
     document.getElementById("resultContentItem1Image").style.marginTop = "-80px";
     document.getElementById("resultContentItem1Image").style.marginLeft = "50px";
-    document.getElementById("result-btn").style.display="none";
+    document.getElementById("result-btn").style.display = "none";
     isClickNext = true;
-    
+
   } else if (imageName == "น้อนอ้วก.png") {
     document.getElementById("result-content-item2-text").innerHTML =
       "";
@@ -200,15 +208,15 @@ function showResultPopup(imageName) {
     document.getElementById("resultContentItem1Image").style.height = "450px";
     document.getElementById("resultContentItem1Image").style.marginTop = "-80px";
     document.getElementById("resultContentItem1Image").style.marginLeft = "50px";
-    document.getElementById("result-btn").style.display="none";
+    document.getElementById("result-btn").style.display = "none";
     isClickNext = true;
-    
+
   }
 
   document.getElementById("resultPopup").style.display = "block";
 }
 function closeResultPopup() {
-  document.getElementById("result-btn").style.display="block";
+  document.getElementById("result-btn").style.display = "block";
   document.getElementById("resultContentItem1Image").style.margin = "0px 0px";
   document.getElementById("resultPopup").style.display = "none";
 }

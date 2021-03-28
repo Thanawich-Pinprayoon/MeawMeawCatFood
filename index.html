@@ -6,11 +6,14 @@
   <title>Meaw Meaw Cat Food</title>
   <meta name="description" content="This is Meaw Meaw Cat Food Web Application" />
   <link rel="stylesheet" href="styles.css" />
+
   <link
     href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
     rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script src="lib/go.js?v=1001"></script>
   <script src="state.js?v=1001"></script>
   <script src="GoJs.js?v=1001"></script>
@@ -106,7 +109,7 @@
           <br>
 
           <div class="foods">
-            <button class="ButtonRe" onclick="restart()">Restart</button>
+            <button class="ButtonRe" id="restart-btn" onclick="restart()">Restart</button>
             <button class="ButtonCon" onclick="(function() {
               showResultPopup(`${machine.current_State.name}.png`);
               handleClick('Confirm');
@@ -152,9 +155,7 @@
     <!-- --------------------------member-content--------------------------- -->
     <div class="member-content">
       <div class="member-content-button" id="memberContentButton">
-        <span class="material-icons-round noselect" style="font-size:50px;color:#ce2d12;cursor: pointer;">
-          cancel
-        </span>
+        <i class="fa fa-times" aria-hidden="true" style="color:#f67676; font-size: 40px;"></i>
       </div>
       <p>นายเกียรติศักดิ์ บัวงาม 61010103</p>
       <p>นายชริตา สุรนันทจักร์ 61010216</p>
@@ -178,9 +179,10 @@
       </div>
       <div class="info-content-item2">
         <div class="info-content-item2-button" id="infoContentItem2Button">
-          <span class="material-icons-round noselect" style="font-size:50px;color:#ce2d12;cursor: pointer;">
+          <!-- <span class="material-icons-round noselect" style="font-size:50px;color:#ce2d12;cursor: pointer;">
             cancel
-          </span>
+          </span> -->
+          <i class="fa fa-times" aria-hidden="true" style="color:#f67676; font-size: 50px;"></i>
         </div>
         <h1 id="info-content-item2-text">นี่คือข้าวสวยร้อน ๆ</h1>
       </div>
@@ -201,9 +203,10 @@
       </div>
       <div class="result-content-item2">
         <div class="info-content-item2-button" id="resultContentItem2Button">
-          <span class="material-icons-round noselect" style="font-size:50px;color:#ce2d12;cursor: pointer;">
+          <!-- <span class="material-icons-round noselect" style="font-size:50px;color:#ce2d12;cursor: pointer;">
             cancel
-          </span>
+          </span> -->
+           <i class="fa fa-times" aria-hidden="true" style="color:#f67676; font-size: 50px;"></i>
         </div>
         <h1 id="result-content-item2-text">นี่คือข้าวหน้าปลาดิบ</h1>
       </div>
