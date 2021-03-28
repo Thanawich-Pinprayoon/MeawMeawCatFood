@@ -45,7 +45,7 @@ document.addEventListener(
       .addEventListener("click", () => showInfoPopup("ขนมแมว.png"));
     document
       .getElementById("restart-btn")
-      .addEventListener("click", resetClickNext());
+      .addEventListener("click", resetClickNext);
 
   },
   false
@@ -53,7 +53,7 @@ document.addEventListener(
 
 function resetClickNext(){
   isClickNext=false;
-  console.log("test");
+  console.log(isClickNext);
 }
 
 function instructionStartButtonClickHandler() {
