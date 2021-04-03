@@ -2,7 +2,36 @@
   padding: 0;
   margin: 0;
   font-family: 'Mali', cursive;
+  user-select: none;
+  -webkit-user-drag: none;
 }
+
+*::-webkit-scrollbar {
+    width: 10px;
+    overflow: auto;
+    border-color: #FF7D7D;
+    
+  }
+
+  /* Track */
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  }
+
+  /* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #e795fa;
+    border-radius: 10px;
+    margin: 2px;
+  }
+
+  /* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #a776ec;
+  }
 
 @font-face {
   font-family: "myFont";
@@ -163,7 +192,7 @@
   border: 5px solid #e795fa;
   background-color: rgba(255, 255, 255, 0.5);
   font-size: 2em;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 .input-container:hover {
@@ -206,6 +235,14 @@
   /* font-size: 1.5rem; */
   padding: 20px;
   margin-left: 10px;
+}
+#inputstring {
+  /* font-size: 1.5rem; */
+  margin-left: 10px;
+  margin-right: 20px;
+  overflow-y: scroll;
+  height: 50%;
+  
 }
 
 .ButtonRe {
